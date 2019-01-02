@@ -2,6 +2,7 @@
 title: "About"
 permalink: /about/
 header:
-	image: "/images/dadSon.jpg"
+  image: "/images/dadSon.jpg"
+---
 
 I'm a grad student
