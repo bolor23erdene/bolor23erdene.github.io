@@ -104,7 +104,7 @@ analytics:
 # Site Author
 author:
   name             : "Bolor-Erdene Zolbayar"
-  avatar           : "/images/dadSon.jpg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  avatar           : "/images/profile.jpg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "Machine Learning Portfolio"
   location         : "State College, PA"
   email            :
