@@ -3,7 +3,7 @@ title: "Machine Learning Project: Perceptron"
 date: 2019-01-07
 tags: [machine learning, security]
 header:
-  image: "images/yosemite.jpg"
+  image: "/images/yosemite.jpg"
 excerpt: "Security"
 
 ---
