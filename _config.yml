@@ -105,9 +105,9 @@ analytics:
 author:
   name             : "Bolor-Erdene Zolbayar"
   avatar           : "/images/profile.jpg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "Machine Learning Portfolio"
+  bio              : "Personal Portfolio"
   location         : "State College, PA"
-  email            : "bolor23erdene At Gmail Dot Com"
+  email            : #"bolor23erdene At Gmail Dot Com"
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
