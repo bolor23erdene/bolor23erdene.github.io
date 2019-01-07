@@ -1,6 +1,6 @@
 ---
 title: "Articles"
-permalink: /about/
+permalink: /articles/
 header:
   image: "/images/yosemite.jpg"
 
