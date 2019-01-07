@@ -6,4 +6,4 @@ header:
 
 ---
 
-I'm a senior data scientist
+I'm a PhD student who excels at machine learning algorithms, programming, and statistics. 
