@@ -1,10 +1,9 @@
 ---
-layout: archive
-permalink: /machinelearning/
 title: "Machine Learning"
-author_profile: true
+permalink: /machinelearning/
 header:
   image: "/images/yosemite.jpg"
 
 ---
 
+I'm a PhD student who excels at machine learning algorithms, programming, and statistics. 
