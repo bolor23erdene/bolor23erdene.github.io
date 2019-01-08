@@ -6,6 +6,7 @@ excerpt: "Security"
 
 ---
 
+$\textbf{B}$
 
 # H1 Heading
 
