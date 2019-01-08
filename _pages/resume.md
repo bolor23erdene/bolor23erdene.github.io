@@ -7,10 +7,9 @@ header:
 ---
 
 # Education
-Pennsylvania State University, State College, PA, USA
-
-PhD in Computer Science GPA 3.86/4.0 2017 - 2020
-MS in Computational Science & Aersp.Eng GPA 3.92/4.0 2016 - 2018
+Pennsylvania State University, State College, PA, USA \n
+PhD in Computer Science GPA 3.86/4.0 2017 - 2020 \n
+MS in Computational Science & Aersp.Eng GPA 3.92/4.0 2016 - 2018 \n
 
 # Certificates
 Neural Networks and Deep Learning, Convolutional Neural Network, Improving Deep Neural Networks, Recurrent Neural
