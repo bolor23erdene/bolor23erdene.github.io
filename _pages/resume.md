@@ -8,6 +8,7 @@ header:
 
 # Education
 Pennsylvania State University, State College, PA, USA
+
 PhD in Computer Science GPA 3.86/4.0 2017 - 2020
 MS in Computational Science & Aersp.Eng GPA 3.92/4.0 2016 - 2018
 
