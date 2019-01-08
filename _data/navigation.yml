@@ -2,6 +2,8 @@
 main:
   - title: "About"
     url: /about/
+  - title: "Resume"
+    url: /resume/
   - title: "Machine Learning"
     url: /machinelearning/
   - title: "Articles"
