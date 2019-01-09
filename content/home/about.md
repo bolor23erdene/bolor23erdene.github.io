@@ -34,4 +34,4 @@ weight = 5
 
 # Biography
 
-Welcome! I am a research assistant in Computer Science Department at Pennsylvania State University working with Prof. Patrick McDaniel. My research interests include machine learning and security.
+Welcome! I am a research assistant in Department of Computer Science at Pennsylvania State University working with Prof. Patrick McDaniel. My research interests include machine learning and security.
