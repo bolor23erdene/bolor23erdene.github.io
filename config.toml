@@ -64,7 +64,7 @@ enableGitInfo = false
 
   # Details for the Contact Widget
   email = "bzz5065@psu.edu"
-  address = "Westgate Building, SIIS lab, Pennsylvania State University, Pennsylvania, 16801, USA"
+  address = "SIIS lab, Westgate Building, Pennsylvania State University, Pennsylvania, 16801, USA"
   office_hours = """
   Monday 10:00 to 13:00<br>
   Wednesday 09:00 to 10:00<br>
