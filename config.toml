@@ -9,7 +9,7 @@
 baseurl = "https://bolor23erdene.github.io/"
 
 # Title of your site
-title = "Academic"
+title = "Bolor-Erdene Zolbayar"
 
 # Your copyright notice - appears in site footer.
 # To display a copyright symbol, type `&copy;`.
@@ -52,8 +52,8 @@ enableGitInfo = false
   # AUTHOR SETUP
 
   # Your details.
-  name = "Lena Smith"
-  role = "Professor of Artificial Intelligence"
+  name = "Bolor-Erdene Zolbayar"
+  role = "Student of Artificial Intelligence"
 
   # Organizations/Affiliations.
   #   Separate multiple entries with a comma, using the form: `[ {name="Org1", url=""}, {name="Org2", url=""} ]`.
@@ -63,15 +63,15 @@ enableGitInfo = false
   avatar = "portrait.jpg"  # Specify an avatar image (in `static/img/` folder) or delete value to disable avatar.
 
   # Details for the Contact Widget
-  email = "test@example.org"
-  address = "Building 1 Room 1, Stanford University, California, 90210, USA"
+  email = "bzz5065@psu.edu"
+  address = "Westgate Building, SIIS lab, Pennsylvania State University, Pennsylvania, 16801, USA"
   office_hours = """
   Monday 10:00 to 13:00<br>
   Wednesday 09:00 to 10:00<br>
   Otherwise email to book an appointment
   """
-  phone = "888 888 88 88"
-  skype = "echo123"
+  phone = "814-441-62-three-three"
+  skype = "bolor23erdene"
   telegram = ""
   keybase = ""  # Your keybase.io username.
 
