@@ -43,7 +43,7 @@ date_format = "Jan 2006"
   date_end = ""
   description = ""
 
-  [[item]]
+[[item]]
     title = "Deep Learning"
     organization = "Coursera/deeplearning.ai"
     certificate_url = "https://www.coursera.org/account/accomplishments/specialization/5GSHM46TCQTK"
