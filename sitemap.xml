@@ -6,6 +6,14 @@
     
     <url>
     
+      <loc>https://bolor23erdene.github.io/posts/book-of-why/</loc>
+      <lastmod>2018-07-25T00:00:00+00:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
       <loc>https://bolor23erdene.github.io/journal/</loc>
       <lastmod>2017-01-01T00:00:00-05:00</lastmod>
     </url>
@@ -56,6 +64,33 @@
     <url>
     
       <loc>https://bolor23erdene.github.io/tags/</loc>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://bolor23erdene.github.io/tags/causal-diagrams/</loc>
+      <lastmod>2018-07-25T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://bolor23erdene.github.io/categories/causal-inference/</loc>
+      <lastmod>2018-07-25T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://bolor23erdene.github.io/categories/reading/</loc>
+      <lastmod>2018-07-25T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     
