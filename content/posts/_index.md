@@ -16,11 +16,10 @@ count = 5
 #   0 = Simple
 #   1 = Detailed
 #   2 = Stream
-list_format = 2
+list_format = 1
 
 # Filter posts by tag or category.
 #  E.g. to only show posts tagged with `Academic`, set `filter_tag = "Academic"`
 filter_tag = ""
 filter_category = ""
 +++
-
