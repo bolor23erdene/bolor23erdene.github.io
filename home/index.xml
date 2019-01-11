@@ -40,38 +40,11 @@
     </item>
     
     <item>
-      <title>Skills</title>
-      <link>https://bolor23erdene.github.io/home/skills/</link>
-      <pubDate>Wed, 20 Sep 2017 00:00:00 -0400</pubDate>
-      
-      <guid>https://bolor23erdene.github.io/home/skills/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Experience</title>
+      <title>Research</title>
       <link>https://bolor23erdene.github.io/home/research/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://bolor23erdene.github.io/home/research/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Certificates</title>
-      <link>https://bolor23erdene.github.io/home/certificates/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://bolor23erdene.github.io/home/certificates/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Recent Publications</title>
-      <link>https://bolor23erdene.github.io/home/publications/</link>
-      <pubDate>Wed, 20 Apr 2016 00:00:00 -0400</pubDate>
-      
-      <guid>https://bolor23erdene.github.io/home/publications/</guid>
       <description></description>
     </item>
     
@@ -94,31 +67,12 @@
     </item>
     
     <item>
-      <title>Recent Posts</title>
-      <link>https://bolor23erdene.github.io/home/posts/</link>
-      <pubDate>Wed, 20 Apr 2016 00:00:00 -0400</pubDate>
-      
-      <guid>https://bolor23erdene.github.io/home/posts/</guid>
-      <description>+++ title = My First Event date = &amp;ldquo;2016-06-24T1904-07:00&amp;rdquo; description = &amp;ldquo;Today is my 36th birthday. How time flies.&amp;rdquo; type = &amp;ldquo;event&amp;rdquo; layout = &amp;ldquo;birthday&amp;rdquo; +++</description>
-    </item>
-    
-    <item>
       <title>Projects</title>
       <link>https://bolor23erdene.github.io/home/projects/</link>
       <pubDate>Wed, 20 Apr 2016 00:00:00 -0400</pubDate>
       
       <guid>https://bolor23erdene.github.io/home/projects/</guid>
       <description></description>
-    </item>
-    
-    <item>
-      <title>Custom Section</title>
-      <link>https://bolor23erdene.github.io/home/teaching/</link>
-      <pubDate>Wed, 20 Apr 2016 00:00:00 -0400</pubDate>
-      
-      <guid>https://bolor23erdene.github.io/home/teaching/</guid>
-      <description>This is an example of using the custom widget to create your own homepage section.
-To remove this section, either delete content/home/teaching.md or edit the frontmatter of the file to deactivate the widget by setting active = false.</description>
     </item>
     
     <item>
