@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Recent Posts on Bolor-Erdene Zolbayar</title>
+    <title>Posts on Bolor-Erdene Zolbayar</title>
     <link>https://bolor23erdene.github.io/posts/</link>
-    <description>Recent content in Recent Posts on Bolor-Erdene Zolbayar</description>
+    <description>Recent content in Posts on Bolor-Erdene Zolbayar</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2018</copyright>
-    <lastBuildDate>Wed, 20 Apr 2016 00:00:00 -0400</lastBuildDate>
+    <lastBuildDate>Sun, 01 Jan 2017 00:00:00 -0500</lastBuildDate>
     
 	<atom:link href="https://bolor23erdene.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     

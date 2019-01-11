@@ -1,25 +1,16 @@
 +++
-# Recent Posts widget.
-# This widget displays recent posts from `content/post/`.
-widget = "posts"  # Do not modify this line!
-active = true  # Activate this widget? true/false
-weight = 40  # Order that this section will appear.
-date = 2016-04-20T00:00:00
-
-title = "Recent Posts"
-subtitle = ""
-
-# Number of recent posts to list.
-count = 5
+title = "Posts"
+date = 2017-01-01T00:00:00
+math = false
+highlight = false
 
 # List format.
 #   0 = Simple
 #   1 = Detailed
-#   2 = Stream
 list_format = 1
 
-# Filter posts by tag or category.
-#  E.g. to only show posts tagged with `Academic`, set `filter_tag = "Academic"`
-filter_tag = ""
-filter_category = ""
+# Optional featured image (relative to `static/img/` folder).
+[header]
+image = ""
+caption = ""
 +++
