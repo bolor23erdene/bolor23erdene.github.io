@@ -326,7 +326,7 @@ enableGitInfo = false
   weight = 6
 
 [[menu.main]]
-  name = "ServicesAwards"
+  name = "Services/Awards"
   url = "sewards"
   weight = 7
 
