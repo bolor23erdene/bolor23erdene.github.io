@@ -506,7 +506,7 @@
 
 <h2 id="what-is-generative-model-a-id-generative-model-a">What is generative model? <a id="generative-model"></a></h2>
 
-<p>Some generative models perform density estimation. The model learns the finite number of samples from the given training data distribution $Pdata$ and returns an estimate of that distribution $P<em>{model}$. The end goal is to represent the $P</em>{data}$ distribution as $P_{model}$ probability distribution.</p>
+<p>Some generative models perform density estimation. The model learns the finite number of samples from the given training data distribution $P_{data}$ and returns an estimate of that distribution $P_{model}$. The end goal is to represent the $P_{data}$ distribution as $P_{model}$ probability distribution.</p>
 
 <h2 id="why-do-you-need-to-study-gans-a-id-why-a">Why do you need to study GANs? <a id="why"></a></h2>
 
@@ -536,7 +536,7 @@
 
 <ol>
 <li>Mode Collapse
-Mode collapse occurs when the generator is generating samples from only specific type of class. According to Goodfellow et al., mode collapse does not seem to be caused by any particular cost function. In some cases, the Jensen-Shannon divergence caused the mode collapse, however, this does not seem to be the case, because GANs that minimize approximations of $D<em>{KL}(P</em>{data}||P_{model})$ face the same same issues, and because the generator often collapses to even fewer modes than would be preferred by the Jensen-Shannon divergence.</li>
+Mode collapse occurs when the generator is generating samples from only specific type of class. According to Goodfellow et al., mode collapse does not seem to be caused by any particular cost function. In some cases, the Jensen-Shannon divergence caused the mode collapse, however, this does not seem to be the case, because GANs that minimize approximations of $D_{KL}(P_{data}||P_{model})$ face the same same issues, and because the generator often collapses to even fewer modes than would be preferred by the Jensen-Shannon divergence.</li>
 </ol>
 
 <p>The mode collapse might be the most important problem with GANs.</p>
@@ -552,7 +552,7 @@ The GANs optimize two deep models: Generator and Discriminator. Optimizing inter
 
 <h2 id="wasserstain-gans-a-id-paper1-a">Wasserstain GANS <a id="paper1"></a></h2>
 
-<p>Learning probability distribution means learning a probability density, which is done by defining a parametric family that maximizes the likelihood on our real data examples ${x^{(i)}}_{i=1}^m$ shown as Eq \ref{eq:1}:</p>
+<p>Learning probability distribution means learning a probability density, which is done by defining a parametric family that maximizes the likelihood on our real data examples ${x^{(i)}}_{i=1}^m$ shown below</p>
 
 <p>\begin{equation} \label{eq:1}
 \mathop{max}<em>{\theta \in R^{d}}\frac{1}{m} \sum</em>{i=1}^{m} log P_{\theta} (x^{(i)})

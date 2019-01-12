@@ -24,7 +24,7 @@ The goal of one of my research is to generate adversarial network traffic that f
 
 ## What is generative model? <a id="generative-model"></a>
 
-Some generative models perform density estimation. The model learns the finite number of samples from the given training data distribution $Pdata$ and returns an estimate of that distribution $P_{model}$. The end goal is to represent the $P_{data}$ distribution as $P_{model}$ probability distribution.
+Some generative models perform density estimation. The model learns the finite number of samples from the given training data distribution $P\_{data}$ and returns an estimate of that distribution $P\_{model}$. The end goal is to represent the $P\_{data}$ distribution as $P\_{model}$ probability distribution.
 
 ## Why do you need to study GANs? <a id="why"></a>
 
@@ -48,7 +48,7 @@ The GANs model consists of generator and discriminator models. Generator and dis
 ## What are the main challenges of GANs <a id="what"></a>
 
 1. Mode Collapse
-Mode collapse occurs when the generator is generating samples from only specific type of class. According to Goodfellow et al., mode collapse does not seem to be caused by any particular cost function. In some cases, the Jensen-Shannon divergence caused the mode collapse, however, this does not seem to be the case, because GANs that minimize approximations of $D_{KL}(P_{data}||P_{model})$ face the same same issues, and because the generator often collapses to even fewer modes than would be preferred by the Jensen-Shannon divergence.
+Mode collapse occurs when the generator is generating samples from only specific type of class. According to Goodfellow et al., mode collapse does not seem to be caused by any particular cost function. In some cases, the Jensen-Shannon divergence caused the mode collapse, however, this does not seem to be the case, because GANs that minimize approximations of $D\_{KL}(P\_{data}||P\_{model})$ face the same same issues, and because the generator often collapses to even fewer modes than would be preferred by the Jensen-Shannon divergence.
 
 The mode collapse might be the most important problem with GANs.
 
@@ -61,7 +61,7 @@ To solve these problems, certain methods are introduced such as Wasserstain GAN 
 
 ## Wasserstain GANS <a id="paper1"></a>
 
-Learning probability distribution means learning a probability density, which is done by defining a parametric family that maximizes the likelihood on our real data examples $\{x^{(i)}\}_{i=1}^m$ shown as Eq \ref{eq:1}:
+Learning probability distribution means learning a probability density, which is done by defining a parametric family that maximizes the likelihood on our real data examples $\{x^{(i)}\}_{i=1}^m$ shown below
 
 \begin{equation} \label{eq:1}
 \mathop{max}_{\theta \in R^{d}}\frac{1}{m} \sum_{i=1}^{m} log P_{\theta} (x^{(i)})
