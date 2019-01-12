@@ -163,19 +163,19 @@
   {{ end }}
 
   <script>hljs.initHighlightingOnLoad();</script>
-{{ end }}
+  {{ end }}
 
-<!-- LaTeX math rendering -->
-{{ if or .Params.math .Site.Params.math }}
-<script type="text/x-mathjax-config">
+  <!-- LaTeX math rendering -->
+  {{ if or .Params.math .Site.Params.math }}
+  <script type="text/x-mathjax-config">
     MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']] } });
-</script>
-{{ if not .Site.Params.disable_sri }}
-{{ printf "<script src=\"https://cdnjs.cloudflare.com/ajax/libs/mathjax/%s/MathJax.js?config=TeX-AMS_CHTML\" integrity=\"%s\" crossorigin=\"anonymous\"></script>" $js.mathJax.version $js.mathJax.sri | safeHTML }}
-{{ else }}
-<script async src="//cdnjs.cloudflare.com/ajax/libs/mathjax/{{- $js.mathJax.version -}}/MathJax.js?config=TeX-AMS_CHTML"></script>
-{{ end }}
-{{ end }}
+  </script>
+  {{ if not .Site.Params.disable_sri }}
+  {{ printf "<script src=\"https://cdnjs.cloudflare.com/ajax/libs/mathjax/%s/MathJax.js?config=TeX-AMS_CHTML\" integrity=\"%s\" crossorigin=\"anonymous\"></script>" $js.mathJax.version $js.mathJax.sri | safeHTML }}
+  {{ else }}
+  <script async src="//cdnjs.cloudflare.com/ajax/libs/mathjax/{{- $js.mathJax.version -}}/MathJax.js?config=TeX-AMS_CHTML"></script>
+  {{ end }}
+  {{ end }}
 
 
   </body>
