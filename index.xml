@@ -33,7 +33,7 @@
 
 &lt;h2 id=&#34;what-is-generative-model-a-id-generative-model-a&#34;&gt;What is generative model? &lt;a id=&#34;generative-model&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
 
-&lt;p&gt;Some generative models perform density estimation. The model learns the finite number of samples from the given training data distribution $P&lt;em&gt;{data}$ and returns an estimate of that distribution $P&lt;/em&gt;{model}$. The end goal is to represent the $P&lt;em&gt;{data}$ distribution as $P&lt;/em&gt;{model}$ probability distribution.&lt;/p&gt;
+&lt;p&gt;Some generative models perform density estimation. The model learns the finite number of samples from the given training data distribution $P&lt;em&gt;(data)$ and returns an estimate of that distribution $P&lt;/em&gt;{model}$. The end goal is to represent the $P&lt;em&gt;{data}$ distribution as $P&lt;/em&gt;{model}$ probability distribution.&lt;/p&gt;
 
 &lt;h2 id=&#34;why-do-you-need-to-study-gans-a-id-why-a&#34;&gt;Why do you need to study GANs? &lt;a id=&#34;why&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
 

@@ -24,7 +24,7 @@ The goal of one of my research is to generate adversarial network traffic that f
 
 ## What is generative model? <a id="generative-model"></a>
 
-Some generative models perform density estimation. The model learns the finite number of samples from the given training data distribution $P_{data}$ and returns an estimate of that distribution $P_{model}$. The end goal is to represent the $P_{data}$ distribution as $P_{model}$ probability distribution.
+Some generative models perform density estimation. The model learns the finite number of samples from the given training data distribution $P_(data)$ and returns an estimate of that distribution $P_{model}$. The end goal is to represent the $P_{data}$ distribution as $P_{model}$ probability distribution.
 
 ## Why do you need to study GANs? <a id="why"></a>
 
