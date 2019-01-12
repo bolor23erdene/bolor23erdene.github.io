@@ -55,7 +55,7 @@ The mode collapse might be the most important problem with GANs.
 2. Non-convergence
 The GANs optimize two deep models: Generator and Discriminator. Optimizing interrelated two different losses due to generator and discriminator is much more complicated than optimizing loss of conventional deep neural network models. In some cases, although each player might go downhill at each update, it might be the case that one player might make the other one to go uphill on its turn. Eventually, this leads to non-convergence.
 
-In the minimax game of GANs, Goodfellow et al. (2014b) showed that the simultaneous gradient descent converges if the updates are made in function space. However, the updates are made in parameter space, so the convexity property needed for the proof doesn't apply. There has not been any theoretical proof that the GAN games should converge or not converge came out yet. 
+In the minimax game of GANs, Goodfellow et al. (2014b) showed that the simultaneous gradient descent converges if the updates are made in function space. However, the updates are made in parameter space, so the convexity property needed for the proof doesn't apply. There has not been any theoretical proof that the GAN games should converge or not converge came out yet.
 
 To solve these problems, certain methods are introduced such as Wasserstain GAN optimization.
 
