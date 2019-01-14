@@ -112,13 +112,13 @@ examples; $L(\theta,x,y)$ - loss function&lt;/p&gt;
 &lt;h2 id=&#34;why-do-you-need-to-study-gans-a-id-why-a&#34;&gt;Why do you need to study GANs? &lt;a id=&#34;why&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
 
 &lt;ol&gt;
-&lt;li&gt;&lt;p&gt;Study high-dimensional probability
+&lt;li&gt;&lt;p&gt;&lt;em&gt;Study high-dimensional probability&lt;/em&gt;:
 Training and generating from generative model is an excellent way to test our ability to manipulate high-dimensional probability distributions. High-dimensional probability distributions are important in applied math and engineering domains.&lt;/p&gt;&lt;/li&gt;
 
-&lt;li&gt;&lt;p&gt;Reinforcement learning
+&lt;li&gt;&lt;p&gt;&lt;em&gt;Reinforcement learning&lt;/em&gt;:
 Reinforcement learning algorithms are divided into model-based and model-free categories. Model-based algorithms can be incorporated with generative models. Generative models of time-series are able to simulate possible futures for the problem. A generative model can learn a conditional probability distributions over a future states of the world, given with current state and actions.&lt;/p&gt;&lt;/li&gt;
 
-&lt;li&gt;&lt;p&gt;Generating data
+&lt;li&gt;&lt;p&gt;&lt;em&gt;Generating data&lt;/em&gt;:
 Generative models can be trained with missing data and can provide prediction on inputs that are missing data. The main idea is to add one more class corresponding to the fake images to the original n classes and train the model. The real-and-fake model also can be trained with known real unlabeled dataset and generated fake dataset.&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
 
@@ -129,15 +129,9 @@ Generative models can be trained with missing data and can provide prediction on
 &lt;h2 id=&#34;what-are-the-main-challenges-of-gans-a-id-what-a&#34;&gt;What are the main challenges of GANs? &lt;a id=&#34;what&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
 
 &lt;ol&gt;
-&lt;li&gt;Mode Collapse
-Mode collapse occurs when the generator is generating samples from only specific type of class. According to Goodfellow et al., mode collapse does not seem to be caused by any particular cost function. In some cases, the Jensen-Shannon divergence caused the mode collapse, however, this does not seem to be the case, because GANs that minimize approximations of $D_{KL}(P_{data}||P_{model})$ face the same same issues, and because the generator often collapses to even fewer modes than would be preferred by the Jensen-Shannon divergence.&lt;/li&gt;
-&lt;/ol&gt;
+&lt;li&gt;&lt;p&gt;&lt;em&gt;Mode Collapse&lt;/em&gt;: Mode collapse occurs when the generator is generating samples from only specific type of class. According to Goodfellow et al., mode collapse does not seem to be caused by any particular cost function. In some cases, the Jensen-Shannon divergence caused the mode collapse, however, this does not seem to be the case, because GANs that minimize approximations of $D_{KL}(P_{data}||P_{model})$ face the same same issues, and because the generator often collapses to even fewer modes than would be preferred by the Jensen-Shannon divergence. The mode collapse might be the most important problem with GANs.&lt;/p&gt;&lt;/li&gt;
 
-&lt;p&gt;The mode collapse might be the most important problem with GANs.&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;Non-convergence
-The GANs optimize two deep models: Generator and Discriminator. Optimizing interrelated two different losses due to generator and discriminator is much more complicated than optimizing loss of conventional deep neural network models. In some cases, although each player might go downhill at each update, it might be the case that one player might make the other one to go uphill on its turn. Eventually, this leads to non-convergence.&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;em&gt;Non-convergence&lt;/em&gt;: The GANs optimize two deep models: Generator and Discriminator. Optimizing interrelated two different losses due to generator and discriminator is much more complicated than optimizing loss of conventional deep neural network models. In some cases, although each player might go downhill at each update, it might be the case that one player might make the other one to go uphill on its turn. Eventually, this leads to non-convergence.&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;p&gt;In the minimax game of GANs, Goodfellow et al. (2014b) showed that the simultaneous gradient descent converges if the updates are made in function space. However, the updates are made in parameter space, so the convexity property needed for the proof doesn&amp;rsquo;t apply. There has not been any theoretical proof that the GAN games should converge or not converge came out yet.&lt;/p&gt;

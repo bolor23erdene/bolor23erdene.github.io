@@ -28,13 +28,13 @@ Some generative models perform density estimation. The model learns the finite n
 
 ## Why do you need to study GANs? <a id="why"></a>
 
-1. Study high-dimensional probability
+1. *Study high-dimensional probability*:
 Training and generating from generative model is an excellent way to test our ability to manipulate high-dimensional probability distributions. High-dimensional probability distributions are important in applied math and engineering domains.
 
-2. Reinforcement learning
+2. *Reinforcement learning*:
 Reinforcement learning algorithms are divided into model-based and model-free categories. Model-based algorithms can be incorporated with generative models. Generative models of time-series are able to simulate possible futures for the problem. A generative model can learn a conditional probability distributions over a future states of the world, given with current state and actions.
 
-3. Generating data
+3. *Generating data*:
 Generative models can be trained with missing data and can provide prediction on inputs that are missing data. The main idea is to add one more class corresponding to the fake images to the original n classes and train the model. The real-and-fake model also can be trained with known real unlabeled dataset and generated fake dataset.
 
 
@@ -44,13 +44,9 @@ The GANs model consists of generator and discriminator models. Generator and dis
 
 ## What are the main challenges of GANs? <a id="what"></a>
 
-1. Mode Collapse
-Mode collapse occurs when the generator is generating samples from only specific type of class. According to Goodfellow et al., mode collapse does not seem to be caused by any particular cost function. In some cases, the Jensen-Shannon divergence caused the mode collapse, however, this does not seem to be the case, because GANs that minimize approximations of $D\_{KL}(P\_{data}||P\_{model})$ face the same same issues, and because the generator often collapses to even fewer modes than would be preferred by the Jensen-Shannon divergence.
+1. *Mode Collapse*: Mode collapse occurs when the generator is generating samples from only specific type of class. According to Goodfellow et al., mode collapse does not seem to be caused by any particular cost function. In some cases, the Jensen-Shannon divergence caused the mode collapse, however, this does not seem to be the case, because GANs that minimize approximations of $D\_{KL}(P\_{data}||P\_{model})$ face the same same issues, and because the generator often collapses to even fewer modes than would be preferred by the Jensen-Shannon divergence. The mode collapse might be the most important problem with GANs.
 
-The mode collapse might be the most important problem with GANs.
-
-2. Non-convergence
-The GANs optimize two deep models: Generator and Discriminator. Optimizing interrelated two different losses due to generator and discriminator is much more complicated than optimizing loss of conventional deep neural network models. In some cases, although each player might go downhill at each update, it might be the case that one player might make the other one to go uphill on its turn. Eventually, this leads to non-convergence.
+2. *Non-convergence*: The GANs optimize two deep models: Generator and Discriminator. Optimizing interrelated two different losses due to generator and discriminator is much more complicated than optimizing loss of conventional deep neural network models. In some cases, although each player might go downhill at each update, it might be the case that one player might make the other one to go uphill on its turn. Eventually, this leads to non-convergence.
 
 In the minimax game of GANs, Goodfellow et al. (2014b) showed that the simultaneous gradient descent converges if the updates are made in function space. However, the updates are made in parameter space, so the convexity property needed for the proof doesn't apply. There has not been any theoretical proof that the GAN games should converge or not converge came out yet.
 
