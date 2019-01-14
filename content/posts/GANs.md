@@ -74,7 +74,7 @@ Theoretical Analysis
 
 They provide a comprehensive theoretical analysis of how the Earth Mover (EM) distance behaves in comparison to popular probability distances and divergences used in the context of learning distributions.
 
-- *A form of GAN called WGAN*:They define the WGAN that minimizes the reasonable and efficient approximation of the EM distance, and they theoretically show that the corresponding problem is sound.
+- *A form of GAN called WGAN*: They define the WGAN that minimizes the reasonable and efficient approximation of the EM distance, and they theoretically show that the corresponding problem is sound.
 
 - *WGANs' advantages*: WGANs does not require maintaining a careful balance in training of the discriminator and the generator, and does not require a careful design of the network architecture either. The mode dropping phenomenon that is typical in GANs is also drastically reduced. The most compelling benefit is the ability to continuously estimate the EM distance by training the discriminator to optimality. Plotting these learning curves is not only useful for debugging and hyperparameter searches, but also correlate remarkably well with the observed same quality.
 
