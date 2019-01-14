@@ -11,6 +11,8 @@ header:
   image: ''
 ---
 
+https://oeis.org/wiki/List_of_LaTeX_mathematical_symbols
+
 I just finished reading *The Book of Why* by Judea Pearl and Dana Mackenzie, and I really enjoyed it. I had been wanting to read it for some time now because I know very little about methodology relating to causal diagrams and structure learning. The book provides an overview of the main ideas that formed and historical events that led up to what Pearl calls the "Causal Revolution", a burgeoning of the direct interrogation of causation as opposed to its implicit renouncement in science for a period before then. Much of the causal inference methodology that Pearl discusses in the book is his own, namely that of causal diagrams and *do*-calculus. In light of his own methods, he also discusses techniques that are popular in disciplines such as psychology and economics. He also discusses another major framework for causal inference, the Rubin causal model. In reflecting on the book, I found it useful to organize my thoughts according to major themes I saw in the book.
 
 ## Table of Contents

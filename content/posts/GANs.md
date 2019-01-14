@@ -60,13 +60,13 @@ To solve these problems, certain methods are introduced such as Wasserstain GAN 
 
 Learning probability distribution means learning a probability density, which is done by defining a parametric family that maximizes the likelihood on our real data examples $\{x^{(i)}\}_{i=1}^m$ shown below
 
-\begin{equation} 
-\mathop{max}_{\theta \in R^{d}}\frac{1}{m} \sum_{i=1}^{m} log P_{\theta} (x^{(i)})
-\end{equation}
+
+$\mathop{max}\_{\theta \in R^{d}}\frac{1}{m} \sum\_{i=1}^{m} log P\_{\theta} (x^{(i)})$
+
 
 The WGAN paper studied various ways to measure how close the model and real distributions are meaning that various ways to define a distance of divergence $\rho(P\_{\theta},P\_{r})$.
 
-The most fundamental difference between such distance is their impact on the convergence of sequences of probability distributions. To optimize the parameter $\theta$, they define model distribution $P_{\theta}$ in a way that results the mapping $\theta->P\_{\theta}$ continuous.
+The most fundamental difference between such distance is their impact on the convergence of sequences of probability distributions. To optimize the parameter $\theta$, they define model distribution $P_{\theta}$ in a way that results the mapping $\theta \rightarrow P\_{\theta}$ continuous.
 
 In short contributions of the paper:
 
@@ -91,7 +91,7 @@ The most compelling benefit is the ability to continuously estimate the EM dista
 
 If the real data distribution $P^{r}$ has a density and $P\_{\theta}$ is the distribution of the density defined by the parametric family, then, the problem converts into minimizing the Kullback-Leibler divergence $KL(P\_{r}||P\_{\theta})$. For this new problem, we must have the density $P\_{\theta}$ to exist. However, in practice, it is common that we deal with distributions supported by low dimensional manifolds, which leads to negligible intersection between true and model distribution resulting infinite KL divergence. In this case, adding noise to the model distribution fixes the problem, which explains why generative models include a noise component. However, this noise reduces the quality of the samples and makes them poor or blurry. In short, adding noise term is wrong, but is needed to make the maximum likelihood approach work.
 
-To solve this problem, without estimating the density $P\_{r}$ which may not even exist, we can create a random variable $Z$ with a fixed distribution p(z) and pass that through a parametric function $g\_{\theta}:Z -> X$ (a neural network in our case)
+To solve this problem, without estimating the density $P\_{r}$ which may not even exist, we can create a random variable $Z$ with a fixed distribution p(z) and pass that through a parametric function $g\_{\theta}:Z \rightarrow X$ (a neural network in our case)
  that directly generates samples following a certain distribution $P\_{\theta}$. By changing $\theta$, we can change this distribution and make it close to the real data distribution $P\_{r}$.
 
  This is useful for two reasons. First, unlike densitites, this approach can represent distributions confined to a low dimensional manifold. Second, the ability to easily generate samples is often more useful than knowing the numerical value of the density (for example in image superresolution or semantic segmentation when considering the conditional distribution of the output image given the input image). In general, it is computationally difficult to generate samples given an arbitrary high dimensional density.

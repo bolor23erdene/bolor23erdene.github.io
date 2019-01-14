@@ -148,13 +148,11 @@ The GANs optimize two deep models: Generator and Discriminator. Optimizing inter
 
 &lt;p&gt;Learning probability distribution means learning a probability density, which is done by defining a parametric family that maximizes the likelihood on our real data examples ${x^{(i)}}_{i=1}^m$ shown below&lt;/p&gt;
 
-&lt;p&gt;\begin{equation}
-\mathop{max}&lt;em&gt;{\theta \in R^{d}}\frac{1}{m} \sum&lt;/em&gt;{i=1}^{m} log P_{\theta} (x^{(i)})
-\end{equation}&lt;/p&gt;
+&lt;p&gt;$\mathop{max}_{\theta \in R^{d}}\frac{1}{m} \sum_{i=1}^{m} log P_{\theta} (x^{(i)})$&lt;/p&gt;
 
 &lt;p&gt;The WGAN paper studied various ways to measure how close the model and real distributions are meaning that various ways to define a distance of divergence $\rho(P_{\theta},P_{r})$.&lt;/p&gt;
 
-&lt;p&gt;The most fundamental difference between such distance is their impact on the convergence of sequences of probability distributions. To optimize the parameter $\theta$, they define model distribution $P_{\theta}$ in a way that results the mapping $\theta-&amp;gt;P_{\theta}$ continuous.&lt;/p&gt;
+&lt;p&gt;The most fundamental difference between such distance is their impact on the convergence of sequences of probability distributions. To optimize the parameter $\theta$, they define model distribution $P_{\theta}$ in a way that results the mapping $\theta \rightarrow P_{\theta}$ continuous.&lt;/p&gt;
 
 &lt;p&gt;In short contributions of the paper:&lt;/p&gt;
 
@@ -179,7 +177,7 @@ The GANs optimize two deep models: Generator and Discriminator. Optimizing inter
 
 &lt;p&gt;If the real data distribution $P^{r}$ has a density and $P_{\theta}$ is the distribution of the density defined by the parametric family, then, the problem converts into minimizing the Kullback-Leibler divergence $KL(P_{r}||P_{\theta})$. For this new problem, we must have the density $P_{\theta}$ to exist. However, in practice, it is common that we deal with distributions supported by low dimensional manifolds, which leads to negligible intersection between true and model distribution resulting infinite KL divergence. In this case, adding noise to the model distribution fixes the problem, which explains why generative models include a noise component. However, this noise reduces the quality of the samples and makes them poor or blurry. In short, adding noise term is wrong, but is needed to make the maximum likelihood approach work.&lt;/p&gt;
 
-&lt;p&gt;To solve this problem, without estimating the density $P_{r}$ which may not even exist, we can create a random variable $Z$ with a fixed distribution p(z) and pass that through a parametric function $g_{\theta}:Z -&amp;gt; X$ (a neural network in our case)
+&lt;p&gt;To solve this problem, without estimating the density $P_{r}$ which may not even exist, we can create a random variable $Z$ with a fixed distribution p(z) and pass that through a parametric function $g_{\theta}:Z \rightarrow X$ (a neural network in our case)
  that directly generates samples following a certain distribution $P_{\theta}$. By changing $\theta$, we can change this distribution and make it close to the real data distribution $P_{r}$.&lt;/p&gt;
 
 &lt;p&gt;This is useful for two reasons. First, unlike densitites, this approach can represent distributions confined to a low dimensional manifold. Second, the ability to easily generate samples is often more useful than knowing the numerical value of the density (for example in image superresolution or semantic segmentation when considering the conditional distribution of the output image given the input image). In general, it is computationally difficult to generate samples given an arbitrary high dimensional density.&lt;/p&gt;
@@ -195,6 +193,8 @@ The GANs optimize two deep models: Generator and Discriminator. Optimizing inter
       
       <guid>https://bolor23erdene.github.io/posts/book-of-why/</guid>
       <description>
+
+&lt;p&gt;&lt;a href=&#34;https://oeis.org/wiki/List_of_LaTeX_mathematical_symbols&#34; target=&#34;_blank&#34;&gt;https://oeis.org/wiki/List_of_LaTeX_mathematical_symbols&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;I just finished reading &lt;em&gt;The Book of Why&lt;/em&gt; by Judea Pearl and Dana Mackenzie, and I really enjoyed it. I had been wanting to read it for some time now because I know very little about methodology relating to causal diagrams and structure learning. The book provides an overview of the main ideas that formed and historical events that led up to what Pearl calls the &amp;ldquo;Causal Revolution&amp;rdquo;, a burgeoning of the direct interrogation of causation as opposed to its implicit renouncement in science for a period before then. Much of the causal inference methodology that Pearl discusses in the book is his own, namely that of causal diagrams and &lt;em&gt;do&lt;/em&gt;-calculus. In light of his own methods, he also discusses techniques that are popular in disciplines such as psychology and economics. He also discusses another major framework for causal inference, the Rubin causal model. In reflecting on the book, I found it useful to organize my thoughts according to major themes I saw in the book.&lt;/p&gt;
 
