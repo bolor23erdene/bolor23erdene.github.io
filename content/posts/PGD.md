@@ -91,4 +91,4 @@ They introduced the saddle point optimization problem. Inside is a maximization 
 
 - By applying SGD using the gradient descent of the loss at adversarial examples they can consistently reduced the loss of the saddle point problem during training.
 
-![This is an image](/static/PGD/loss.jpg)
+![This is an image](/static/PGD/loss.png)
