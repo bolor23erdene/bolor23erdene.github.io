@@ -22,7 +22,7 @@ The goal of this paper is to train a machine learning model such that the ML sys
 ## Why do they want to do robust optimization? <a id="why"></a>
 
 1. Growth in Machine Learning
-Application of machine learning has been exponentially increasing in recent years following the development in high computational power and data availability. Recent breakthroughs in computer vision and speech recognition enable us to ride on a self-driving car, make a restaurant or haircut order without touching phone screen, and  search what you need on youtube or google simply telling a few words. A new research study ["Machine Learning Market"](https://www.marketwatch.com/press-release/global-machine-learning-market-2018-expected-to-reach-3998-billion-by-2025-and-research-analysis-done-by-technologies-types-2018-08-20) states that the machine learning market is expected to grow from 1.3\$ billion in 2016 to 40\$ billion in 2025. For these reasons, security of machine learning has become one of the most important fields that needs to be studied.
+Application of machine learning has been exponentially increasing in recent years following the development in high computational power and data availability. Recent breakthroughs in computer vision and speech recognition enable us to ride on a self-driving car, make a restaurant or haircut order without touching phone screen, and  search what you need on youtube or google simply telling a few words. A new research study ["Machine Learning Market"](https://www.marketwatch.com/press-release/global-machine-learning-market-2018-expected-to-reach-3998-billion-by-2025-and-research-analysis-done-by-technologies-types-2018-08-20) states that the machine learning market is expected to grow from 1.3 billion USD in 2016 to 40 billion USD in 2025. For these reasons, security of machine learning has become one of the most important fields that needs to be studied.
 
 2. Robust neural networks 
 Adversaries often create adversarial exmaples by modifying features of training examples that are close to decision boundary. To create a robust neural networks resistant to these adversarial examples, one technique is to create adversarial examples using training examples close to decision boundary and train the neural networks with them. As a result, the neural networks become more robust. 
@@ -62,7 +62,7 @@ To make the model resistant, they augmented the ERM by following steps.
 
 1.  They specify the attack model
 2. for each training example x, they introduce set of perturbations $S \in \mathbb{R}^{d}$ that represents the manipulative power of adversary
-3. They modified the population risk $E_{d} [L]$ instead of feeding loss L with samples from original D distribution, they perturb the inputs. In this paper, they only focused on $l_{\infinity}$ bounded attacks.
+3. They modified the population risk $E_{d}[L]$ instead of feeding loss L with samples from original D distribution, they perturb the inputs. In this paper, they only focused on $l_{\infinity}$ bounded attacks.
 
 They introduced the saddle point optimization problem. Inside is a maximization and outside is a minimization problem.
 
