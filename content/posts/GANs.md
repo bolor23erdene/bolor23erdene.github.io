@@ -3,7 +3,7 @@ title: 'What is GANs?'
 author: Bolor-Erdene Zolbayar
 date: '2019-01-12'
 slug:
-categories: ["causal inference", "reading"]
+categories: ["adversarial machine learning", "research"]
 tags: ["causal diagrams"]
 math: true
 header:
@@ -42,7 +42,7 @@ Generative models can be trained with missing data and can provide prediction on
 
 The GANs model consists of generator and discriminator models. Generator and discriminator can be seen as counterfeiter and policeman, respectively. The counterfeiter generates fake currency and inject it to market while the policeman evaluates the currency and tells if the currency is real or fake. Due to competition between counterfeiter and policeman, their craftsmanship and evaluation get better and better. At the end, the counterfeiter learns to generate fake currency that is indistinguishable from the real currency.
 
-## What are the main challenges of GANs <a id="what"></a>
+## What are the main challenges of GANs? <a id="what"></a>
 
 1. Mode Collapse
 Mode collapse occurs when the generator is generating samples from only specific type of class. According to Goodfellow et al., mode collapse does not seem to be caused by any particular cost function. In some cases, the Jensen-Shannon divergence caused the mode collapse, however, this does not seem to be the case, because GANs that minimize approximations of $D\_{KL}(P\_{data}||P\_{model})$ face the same same issues, and because the generator often collapses to even fewer modes than would be preferred by the Jensen-Shannon divergence.
@@ -70,24 +70,15 @@ The most fundamental difference between such distance is their impact on the con
 
 In short contributions of the paper:
 
-\begin{itemize}
-\item{Theoretical Analysis}
+####Theoretical Analysis
 
 They provide a comprehensive theoretical analysis of how the Earth Mover (EM) distance behaves in comparison to popular probability distances and divergences used in the context of learning distributions.
 
-\item{A form of GAN called WGAN}
+-**A form of GAN called WGAN**:They define the WGAN that minimizes the reasonable and efficient approximation of the EM distance, and they theoretically show that the corresponding problem is sound.
 
-They defines the WGAN that minimizes the reasonable and efficient approximation of the EM distance, and they theoretically show that the corresponding problem is sound.
+-**WGANs' advantages**: WGANs does not require maintaining a careful balance in training of the discriminator and the generator, and does not require a careful design of the network architecture either. The mode dropping phenomenon that is typical in GANs is also drastically reduced. The most compelling benefit is the ability to continuously estimate the EM distance by training the discriminator to optimality. Plotting these learning curves is not only useful for debugging and hyperparameter searches, but also correlate remarkably well with the observed same quality.
 
-\item{WGANs' advantages}
 
-WGANs does not require maintaining a careful balance in training of the discriminator and the generator, and does not require a careful design of the network architecture either.
-
-The mode dropping phenomenon that is typical in GANs is also drastically reduced.
-
-The most compelling benefit is the ability to continuously estimate the EM distance by training the discriminator to optimality. Plotting these learning curves is not only useful for debugging and hyperparameter searches, but also correlate remarkably well with the observed same quality.
-
-\end{itemize}
 
 If the real data distribution $P^{r}$ has a density and $P\_{\theta}$ is the distribution of the density defined by the parametric family, then, the problem converts into minimizing the Kullback-Leibler divergence $KL(P\_{r}||P\_{\theta})$. For this new problem, we must have the density $P\_{\theta}$ to exist. However, in practice, it is common that we deal with distributions supported by low dimensional manifolds, which leads to negligible intersection between true and model distribution resulting infinite KL divergence. In this case, adding noise to the model distribution fixes the problem, which explains why generative models include a noise component. However, this noise reduces the quality of the samples and makes them poor or blurry. In short, adding noise term is wrong, but is needed to make the maximum likelihood approach work.
 
