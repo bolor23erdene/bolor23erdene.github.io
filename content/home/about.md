@@ -18,7 +18,7 @@ weight = 5
 [[education.courses]]
   course = "PhD in Computer Science and Engineering"
   institution = "Pennsylvania State University"
-  year = 2020
+  year = 2021
 
 [[education.courses]]
   course = "MS in Computational Science and Aersp. Eng"
