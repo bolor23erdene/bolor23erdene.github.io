@@ -28,7 +28,7 @@
 &lt;li&gt;&lt;a href=&#34;#what&#34;&gt;What are the some math behind this magic?&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;h2 id=&#34;why-do-they-want-to-do-robust-optimization-a-id-why-a&#34;&gt;Why do they want to do robust optimization? &lt;a id=&#34;why&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&#34;why-do-they-want-to-do-robust-optimization-a-id-why-a&#34;&gt;&lt;strong&gt;&lt;em&gt;Why do they want to do robust optimization?&lt;/em&gt;&lt;/strong&gt; &lt;a id=&#34;why&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
 
 &lt;ol&gt;
 &lt;li&gt;&lt;p&gt;Growth in Machine Learning
@@ -41,7 +41,7 @@ Adversaries often create adversarial exmaples by modifying features of training 
 Previously, there were many defense techniques including defensive distillation, feature squeezing, and several others. They claim that these techniques don&amp;rsquo;t offer a good understanding of the guarantees they provided. Their a natural saddle point formulation technique guarantees security to broad range of attacks. They were able to create attack and defense mechanisms with this technique. The adversarial training directly relates with optimizing the saddle point problem.&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;h2 id=&#34;how-does-gans-work-a-id-how-a&#34;&gt;How does GANs work? &lt;a id=&#34;how&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&#34;how-does-gans-work-a-id-how-a&#34;&gt;&lt;strong&gt;&lt;em&gt;How does GANs work?&lt;/em&gt;&lt;/strong&gt; &lt;a id=&#34;how&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
 
 &lt;p&gt;They make the following contributions:&lt;/p&gt;
 
@@ -61,22 +61,22 @@ in case of the weaker black box/transfer attacks, our MNIST and CIFAR10 networks
 the accuracy of more than 95% and 64%, respectively.&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;h2 id=&#34;what-are-the-some-math-behind-this-magic-a-id-what-a&#34;&gt;What are the some math behind this magic? &lt;a id=&#34;what&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&#34;what-are-the-some-math-behind-this-magic-a-id-what-a&#34;&gt;&lt;strong&gt;&lt;em&gt;What are the some math behind this magic?&lt;/em&gt;&lt;/strong&gt; &lt;a id=&#34;what&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
 
 &lt;p&gt;$ \theta \in \mathbb{R}^{d}$; D - training data distribution; $x \in \mathbb{R}^{d}$ training examples; $y \in [k]$ labels for corresponding
 examples; $L(\theta,x,y)$ - loss function&lt;/p&gt;
 
-&lt;h3 id=&#34;the-goal-is-to-minimize-the-risk-e-x-y-sim-d-l-x-y-theta&#34;&gt;The goal is to minimize the risk $E_{(x,y)} \sim D[L(x,y,\theta)]$&lt;/h3&gt;
+&lt;h3 id=&#34;the-goal-is-to-minimize-the-risk-e-x-y-sim-d-l-x-y-theta&#34;&gt;&lt;em&gt;The goal is to minimize the risk: $E_{(x,y)} \sim D[L(x,y,\theta)]$&lt;/em&gt;&lt;/h3&gt;
 
 &lt;p&gt;This ERM is great for classifiers. But, it doesn&amp;rsquo;t provide resistance to adversarial examples&lt;/p&gt;
 
-&lt;h3 id=&#34;how-to-make-it-robust&#34;&gt;How to make it robust?&lt;/h3&gt;
+&lt;h3 id=&#34;how-to-make-it-robust&#34;&gt;&lt;em&gt;How to make it robust?&lt;/em&gt;&lt;/h3&gt;
 
 &lt;p&gt;To make the model resistant, they augmented the ERM by following steps.&lt;/p&gt;
 
 &lt;ol&gt;
 &lt;li&gt;They specify the attack model&lt;/li&gt;
-&lt;li&gt;for each training example x, they introduce set of perturbations $S \in \mathbb{R}^{d}$ that represents the manipulative power of adversary&lt;/li&gt;
+&lt;li&gt;For each training example x, they introduce set of perturbations $S \in \mathbb{R}^{d}$ that represents the manipulative power of adversary&lt;/li&gt;
 &lt;li&gt;They modified the population risk $E_{d}[L]$ instead of feeding loss L with samples from original D distribution, they perturb the inputs. In this paper, they only focused on $l_{\infty}$ bounded attacks.&lt;/li&gt;
 &lt;/ol&gt;
 

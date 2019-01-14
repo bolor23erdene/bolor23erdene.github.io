@@ -501,7 +501,7 @@
 <li><a href="#what">What are the some math behind this magic?</a></li>
 </ol>
 
-<h2 id="why-do-they-want-to-do-robust-optimization-a-id-why-a">Why do they want to do robust optimization? <a id="why"></a></h2>
+<h2 id="why-do-they-want-to-do-robust-optimization-a-id-why-a"><strong><em>Why do they want to do robust optimization?</em></strong> <a id="why"></a></h2>
 
 <ol>
 <li><p>Growth in Machine Learning
@@ -514,7 +514,7 @@ Adversaries often create adversarial exmaples by modifying features of training 
 Previously, there were many defense techniques including defensive distillation, feature squeezing, and several others. They claim that these techniques don&rsquo;t offer a good understanding of the guarantees they provided. Their a natural saddle point formulation technique guarantees security to broad range of attacks. They were able to create attack and defense mechanisms with this technique. The adversarial training directly relates with optimizing the saddle point problem.</p></li>
 </ol>
 
-<h2 id="how-does-gans-work-a-id-how-a">How does GANs work? <a id="how"></a></h2>
+<h2 id="how-does-gans-work-a-id-how-a"><strong><em>How does GANs work?</em></strong> <a id="how"></a></h2>
 
 <p>They make the following contributions:</p>
 
@@ -534,22 +534,22 @@ in case of the weaker black box/transfer attacks, our MNIST and CIFAR10 networks
 the accuracy of more than 95% and 64%, respectively.</p></li>
 </ol>
 
-<h2 id="what-are-the-some-math-behind-this-magic-a-id-what-a">What are the some math behind this magic? <a id="what"></a></h2>
+<h2 id="what-are-the-some-math-behind-this-magic-a-id-what-a"><strong><em>What are the some math behind this magic?</em></strong> <a id="what"></a></h2>
 
 <p>$ \theta \in \mathbb{R}^{d}$; D - training data distribution; $x \in \mathbb{R}^{d}$ training examples; $y \in [k]$ labels for corresponding
 examples; $L(\theta,x,y)$ - loss function</p>
 
-<h3 id="the-goal-is-to-minimize-the-risk-e-x-y-sim-d-l-x-y-theta">The goal is to minimize the risk $E_{(x,y)} \sim D[L(x,y,\theta)]$</h3>
+<h3 id="the-goal-is-to-minimize-the-risk-e-x-y-sim-d-l-x-y-theta"><em>The goal is to minimize the risk: $E_{(x,y)} \sim D[L(x,y,\theta)]$</em></h3>
 
 <p>This ERM is great for classifiers. But, it doesn&rsquo;t provide resistance to adversarial examples</p>
 
-<h3 id="how-to-make-it-robust">How to make it robust?</h3>
+<h3 id="how-to-make-it-robust"><em>How to make it robust?</em></h3>
 
 <p>To make the model resistant, they augmented the ERM by following steps.</p>
 
 <ol>
 <li>They specify the attack model</li>
-<li>for each training example x, they introduce set of perturbations $S \in \mathbb{R}^{d}$ that represents the manipulative power of adversary</li>
+<li>For each training example x, they introduce set of perturbations $S \in \mathbb{R}^{d}$ that represents the manipulative power of adversary</li>
 <li>They modified the population risk $E_{d}[L]$ instead of feeding loss L with samples from original D distribution, they perturb the inputs. In this paper, they only focused on $l_{\infty}$ bounded attacks.</li>
 </ol>
 

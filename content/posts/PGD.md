@@ -19,7 +19,7 @@ The goal of this paper is to train a machine learning model such that the ML sys
 2. [How were they able to achieve training that resulted high resistance to adversarial examples?](#how)
 3. [What are the some math behind this magic?](#what)
 
-## Why do they want to do robust optimization? <a id="why"></a>
+## ***Why do they want to do robust optimization?*** <a id="why"></a>
 
 1. Growth in Machine Learning
 Application of machine learning has been exponentially increasing in recent years following the development in high computational power and data availability. Recent breakthroughs in computer vision and speech recognition enable us to ride on a self-driving car, make a restaurant or haircut order without touching phone screen, and  search what you need on youtube or google simply telling a few words. A new research study ["Machine Learning Market"](https://www.marketwatch.com/press-release/global-machine-learning-market-2018-expected-to-reach-3998-billion-by-2025-and-research-analysis-done-by-technologies-types-2018-08-20) states that the machine learning market is expected to grow from 1.3 billion USD in 2016 to 40 billion USD in 2025. For these reasons, security of machine learning has become one of the most important fields that needs to be studied.
@@ -31,7 +31,7 @@ Adversaries often create adversarial exmaples by modifying features of training 
 Previously, there were many defense techniques including defensive distillation, feature squeezing, and several others. They claim that these techniques don't offer a good understanding of the guarantees they provided. Their a natural saddle point formulation technique guarantees security to broad range of attacks. They were able to create attack and defense mechanisms with this technique. The adversarial training directly relates with optimizing the saddle point problem.  
 
 
-## How does GANs work? <a id="how"></a>
+## ***How does GANs work?*** <a id="how"></a>
 
 They make the following contributions:
 
@@ -49,19 +49,19 @@ Our CIFAR10 model achieves an accuracy of 46% against the same adversary. Furthe
 in case of the weaker black box/transfer attacks, our MNIST and CIFAR10 networks achieve
 the accuracy of more than 95% and 64%, respectively.
 
-## What are the some math behind this magic? <a id="what"></a>
+## ***What are the some math behind this magic?*** <a id="what"></a>
 
 $ \theta \in \mathbb{R}^{d}$; D - training data distribution; $x \in \mathbb{R}^{d}$ training examples; $y \in [k]$ labels for corresponding 
 examples; $L(\theta,x,y)$ - loss function
 
-### The goal is to minimize the risk $E_{(x,y)} \sim D[L(x,y,\theta)]$
+### *The goal is to minimize the risk: $E_{(x,y)} \sim D[L(x,y,\theta)]$*
 This ERM is great for classifiers. But, it doesn't provide resistance to adversarial examples
 
-### How to make it robust? 
+### *How to make it robust?*
 To make the model resistant, they augmented the ERM by following steps.
 
-1.  They specify the attack model
-2. for each training example x, they introduce set of perturbations $S \in \mathbb{R}^{d}$ that represents the manipulative power of adversary
+1. They specify the attack model
+2. For each training example x, they introduce set of perturbations $S \in \mathbb{R}^{d}$ that represents the manipulative power of adversary
 3. They modified the population risk $E\_{d}[L]$ instead of feeding loss L with samples from original D distribution, they perturb the inputs. In this paper, they only focused on $l\_{\infty}$ bounded attacks.
 
 They introduced the saddle point optimization problem. Inside is a maximization and outside is a minimization problem.

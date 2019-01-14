@@ -4,7 +4,7 @@ author: Bolor-Erdene Zolbayar
 date: '2019-01-12'
 slug:
 categories: ["adversarial machine learning", "research"]
-tags: ["causal diagrams"]
+tags: ["GANs"]
 math: true
 header:
   caption: ''
