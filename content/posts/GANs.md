@@ -22,11 +22,11 @@ The goal of one of my research is to generate adversarial network traffic that f
 5. [Wasserstain GANs](#paper1)
 6. [Improved techniques for training GANs](#paper2)
 
-## What is generative model? <a id="generative-model"></a>
+## ***What is generative model?*** <a id="generative-model"></a>
 
 Some generative models perform density estimation. The model learns the finite number of samples from the given training data distribution $P\_{data}$ and returns an estimate of that distribution $P\_{model}$. The end goal is to represent the $P\_{data}$ distribution as $P\_{model}$ probability distribution.
 
-## Why do you need to study GANs? <a id="why"></a>
+## ***Why do you need to study GANs?*** <a id="why"></a>
 
 1. *Study high-dimensional probability*:
 Training and generating from generative model is an excellent way to test our ability to manipulate high-dimensional probability distributions. High-dimensional probability distributions are important in applied math and engineering domains.
@@ -38,11 +38,11 @@ Reinforcement learning algorithms are divided into model-based and model-free ca
 Generative models can be trained with missing data and can provide prediction on inputs that are missing data. The main idea is to add one more class corresponding to the fake images to the original n classes and train the model. The real-and-fake model also can be trained with known real unlabeled dataset and generated fake dataset.
 
 
-## How does GANs work? <a id="how"></a>
+## ***How does GANs work?*** <a id="how"></a>
 
 The GANs model consists of generator and discriminator models. Generator and discriminator can be seen as counterfeiter and policeman, respectively. The counterfeiter generates fake currency and inject it to market while the policeman evaluates the currency and tells if the currency is real or fake. Due to competition between counterfeiter and policeman, their craftsmanship and evaluation get better and better. At the end, the counterfeiter learns to generate fake currency that is indistinguishable from the real currency.
 
-## What are the main challenges of GANs? <a id="what"></a>
+## ***What are the main challenges of GANs?*** <a id="what"></a>
 
 1. *Mode Collapse*: Mode collapse occurs when the generator is generating samples from only specific type of class. According to Goodfellow et al., mode collapse does not seem to be caused by any particular cost function. In some cases, the Jensen-Shannon divergence caused the mode collapse, however, this does not seem to be the case, because GANs that minimize approximations of $D\_{KL}(P\_{data}||P\_{model})$ face the same same issues, and because the generator often collapses to even fewer modes than would be preferred by the Jensen-Shannon divergence. The mode collapse might be the most important problem with GANs.
 
@@ -52,7 +52,7 @@ In the minimax game of GANs, Goodfellow et al. (2014b) showed that the simultane
 
 To solve these problems, certain methods are introduced such as Wasserstain GAN optimization.
 
-## Wasserstain GANS <a id="paper1"></a>
+## ***Wasserstain GANS*** <a id="paper1"></a>
 
 Learning probability distribution means learning a probability density, which is done by defining a parametric family that maximizes the likelihood on our real data examples $\{x^{(i)}\}_{i=1}^m$ shown below
 
