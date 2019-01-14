@@ -77,7 +77,7 @@ examples; $L(\theta,x,y)$ - loss function&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;They specify the attack model&lt;/li&gt;
 &lt;li&gt;for each training example x, they introduce set of perturbations $S \in \mathbb{R}^{d}$ that represents the manipulative power of adversary&lt;/li&gt;
-&lt;li&gt;They modified the population risk $E_{d}[L]$ instead of feeding loss L with samples from original D distribution, they perturb the inputs. In this paper, they only focused on $l_{\infinity}$ bounded attacks.&lt;/li&gt;
+&lt;li&gt;They modified the population risk $E_{d}[L]$ instead of feeding loss L with samples from original D distribution, they perturb the inputs. In this paper, they only focused on $l_{\infty}$ bounded attacks.&lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;p&gt;They introduced the saddle point optimization problem. Inside is a maximization and outside is a minimization problem.&lt;/p&gt;
@@ -112,22 +112,15 @@ examples; $L(\theta,x,y)$ - loss function&lt;/p&gt;
 &lt;h2 id=&#34;why-do-you-need-to-study-gans-a-id-why-a&#34;&gt;Why do you need to study GANs? &lt;a id=&#34;why&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
 
 &lt;ol&gt;
-&lt;li&gt;Study high-dimensional probability&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Study high-dimensional probability
+Training and generating from generative model is an excellent way to test our ability to manipulate high-dimensional probability distributions. High-dimensional probability distributions are important in applied math and engineering domains.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Reinforcement learning
+Reinforcement learning algorithms are divided into model-based and model-free categories. Model-based algorithms can be incorporated with generative models. Generative models of time-series are able to simulate possible futures for the problem. A generative model can learn a conditional probability distributions over a future states of the world, given with current state and actions.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Generating data
+Generative models can be trained with missing data and can provide prediction on inputs that are missing data. The main idea is to add one more class corresponding to the fake images to the original n classes and train the model. The real-and-fake model also can be trained with known real unlabeled dataset and generated fake dataset.&lt;/p&gt;&lt;/li&gt;
 &lt;/ol&gt;
-
-&lt;p&gt;Training and generating from generative model is an excellent way to test our ability to manipulate high-dimensional probability distributions. High-dimensional probability distributions are important in applied math and engineering domains.&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;Reinforcement learning&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;Reinforcement learning algorithms are divided into model-based and model-free categories. Model-based algorithms can be incorporated with generative models. Generative models of time-series are able to simulate possible futures for the problem. A generative model can learn a conditional probability distributions over a future states of the world, given with current state and actions.&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;Generating data&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;Generative models can be trained with missing data and can provide prediction on inputs that are missing data. The main idea is to add one more class corresponding to the fake images to the original n classes and train the model. The real-and-fake model also can be trained with known real unlabeled dataset and generated fake dataset.&lt;/p&gt;
 
 &lt;h2 id=&#34;how-does-gans-work-a-id-how-a&#34;&gt;How does GANs work? &lt;a id=&#34;how&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
 
@@ -155,13 +148,13 @@ The GANs optimize two deep models: Generator and Discriminator. Optimizing inter
 
 &lt;p&gt;Learning probability distribution means learning a probability density, which is done by defining a parametric family that maximizes the likelihood on our real data examples ${x^{(i)}}_{i=1}^m$ shown below&lt;/p&gt;
 
-&lt;p&gt;\begin{equation} \label{eq:1}
+&lt;p&gt;\begin{equation}
 \mathop{max}&lt;em&gt;{\theta \in R^{d}}\frac{1}{m} \sum&lt;/em&gt;{i=1}^{m} log P_{\theta} (x^{(i)})
 \end{equation}&lt;/p&gt;
 
-&lt;p&gt;The WGAN paper studied various ways to measure how close the model and real distributions are meaning that various ways to define a distance of divergence $\rho(P&lt;em&gt;{\theta},P&lt;/em&gt;{r})$.&lt;/p&gt;
+&lt;p&gt;The WGAN paper studied various ways to measure how close the model and real distributions are meaning that various ways to define a distance of divergence $\rho(P_{\theta},P_{r})$.&lt;/p&gt;
 
-&lt;p&gt;The most fundamental difference between such distance is their impact on the convergence of sequences of probability distributions. To optimize the parameter $\theta$, they define model distribution $P&lt;em&gt;{\theta}$ in a way that results the mapping $\theta-&amp;gt;P&lt;/em&gt;{\theta}$ continuous.&lt;/p&gt;
+&lt;p&gt;The most fundamental difference between such distance is their impact on the convergence of sequences of probability distributions. To optimize the parameter $\theta$, they define model distribution $P_{\theta}$ in a way that results the mapping $\theta-&amp;gt;P_{\theta}$ continuous.&lt;/p&gt;
 
 &lt;p&gt;In short contributions of the paper:&lt;/p&gt;
 
@@ -184,10 +177,10 @@ The GANs optimize two deep models: Generator and Discriminator. Optimizing inter
 
 &lt;p&gt;\end{itemize}&lt;/p&gt;
 
-&lt;p&gt;If the real data distribution $P^{r}$ has a density and $P&lt;em&gt;{\theta}$ is the distribution of the density defined by the parametric family, then, the problem converts into minimizing the Kullback-Leibler divergence $KL(P&lt;/em&gt;{r}||P&lt;em&gt;{\theta})$. For this new problem, we must have the density $P&lt;/em&gt;{\theta}$ to exist. However, in practice, it is common that we deal with distributions supported by low dimensional manifolds, which leads to negligible intersection between true and model distribution resulting infinite KL divergence. In this case, adding noise to the model distribution fixes the problem, which explains why generative models include a noise component. However, this noise reduces the quality of the samples and makes them poor or blurry. In short, adding noise term is wrong, but is needed to make the maximum likelihood approach work.&lt;/p&gt;
+&lt;p&gt;If the real data distribution $P^{r}$ has a density and $P_{\theta}$ is the distribution of the density defined by the parametric family, then, the problem converts into minimizing the Kullback-Leibler divergence $KL(P_{r}||P_{\theta})$. For this new problem, we must have the density $P_{\theta}$ to exist. However, in practice, it is common that we deal with distributions supported by low dimensional manifolds, which leads to negligible intersection between true and model distribution resulting infinite KL divergence. In this case, adding noise to the model distribution fixes the problem, which explains why generative models include a noise component. However, this noise reduces the quality of the samples and makes them poor or blurry. In short, adding noise term is wrong, but is needed to make the maximum likelihood approach work.&lt;/p&gt;
 
-&lt;p&gt;To solve this problem, without estimating the density $P&lt;em&gt;{r}$ which may not even exist, we can create a random variable $Z$ with a fixed distribution p(z) and pass that through a parametric function $g&lt;/em&gt;{\theta}:Z -&amp;gt; X$ (a neural network in our case)
- that directly generates samples following a certain distribution $P&lt;em&gt;{\theta}$. By changing $\theta$, we can change this distribution and make it close to the real data distribution $P&lt;/em&gt;{r}$.&lt;/p&gt;
+&lt;p&gt;To solve this problem, without estimating the density $P_{r}$ which may not even exist, we can create a random variable $Z$ with a fixed distribution p(z) and pass that through a parametric function $g_{\theta}:Z -&amp;gt; X$ (a neural network in our case)
+ that directly generates samples following a certain distribution $P_{\theta}$. By changing $\theta$, we can change this distribution and make it close to the real data distribution $P_{r}$.&lt;/p&gt;
 
 &lt;p&gt;This is useful for two reasons. First, unlike densitites, this approach can represent distributions confined to a low dimensional manifold. Second, the ability to easily generate samples is often more useful than knowing the numerical value of the density (for example in image superresolution or semantic segmentation when considering the conditional distribution of the output image given the input image). In general, it is computationally difficult to generate samples given an arbitrary high dimensional density.&lt;/p&gt;
 
