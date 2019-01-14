@@ -51,10 +51,10 @@ the accuracy of more than 95% and 64%, respectively.
 
 ## What are the some math behind this magic? <a id="what"></a>
 
-$\_theta \_in \_R^_{d} \newline$ 
+$\_theta \_in \_R^_{d}$ 
 D - training data distribution \_newline 
 $x \in \R^d$ training examples, $y \_in [k]$ labels for corresponding examples
-L(\theta,x,y)
+$L(\theta,x,y)$
 
 ### The goal is to minimize the risk E_(x,y) ~ D[L(x,y,\theta)]
 This ERM is great for classifiers. But, it doesn't provide resistance to adversarial examples
