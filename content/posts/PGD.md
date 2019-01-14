@@ -62,7 +62,7 @@ To make the model resistant, they augmented the ERM by following steps.
 
 1.  They specify the attack model
 2. for each training example x, they introduce set of perturbations $S \in \mathbb{R}^{d}$ that represents the manipulative power of adversary
-3. They modified the population risk $E_{d} [L] $ instead of feeding loss L with samples from original D distribution, they perturb the inputs. In this paper, they only focused on $l_{\infinity}$ bounded attacks.
+3. They modified the population risk $E_{d} [L]$ instead of feeding loss L with samples from original D distribution, they perturb the inputs. In this paper, they only focused on $l_{\infinity}$ bounded attacks.
 
 They introduced the saddle point optimization problem. Inside is a maximization and outside is a minimization problem.
 
