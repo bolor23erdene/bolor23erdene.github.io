@@ -51,7 +51,7 @@ the accuracy of more than 95% and 64%, respectively.
 
 ## What are the some math behind this magic? <a id="what"></a>
 
-\theta \in \R^d, D - training data distribution, x \in \R^d training examples, y \in [k] labels for corresponding examples, L(\theta,x,y)
+\_theta \in \R^d, D - training data distribution, x \in \R^d training examples, y \in [k] labels for corresponding examples, L(\theta,x,y)
 
 ### The goal is to minimize the risk E_(x,y) ~ D[L(x,y,\theta)]
 This ERM is great for classifiers. But, it doesn't provide resistance to adversarial examples
@@ -65,44 +65,3 @@ To make the model resistant, they augmented the ERM by following steps.
 
 They introduced the saddle point optimization problem. Inside is a maximization and outside is a minimization problem.
 
-## Wasserstain GANS <a id="paper1"></a>
-
-Learning probability distribution means learning a probability density, which is done by defining a parametric family that maximizes the likelihood on our real data examples $\{x^{(i)}\}_{i=1}^m$ shown below
-
-\begin{equation} \label{eq:1}
-\mathop{max}_{\theta \in R^{d}}\frac{1}{m} \sum_{i=1}^{m} log P_{\theta} (x^{(i)})
-\end{equation}
-
-The WGAN paper studied various ways to measure how close the model and real distributions are meaning that various ways to define a distance of divergence $\rho(P_{\theta},P_{r})$.
-
-The most fundamental difference between such distance is their impact on the convergence of sequences of probability distributions. To optimize the parameter $\theta$, they define model distribution $P_{\theta}$ in a way that results the mapping $\theta->P_{\theta}$ continuous.
-
-In short contributions of the paper:
-
-\begin{itemize}
-\item{Theoretical Analysis}
-
-They provide a comprehensive theoretical analysis of how the Earth Mover (EM) distance behaves in comparison to popular probability distances and divergences used in the context of learning distributions.
-
-\item{A form of GAN called WGAN}
-
-They defines the WGAN that minimizes the reasonable and efficient approximation of the EM distance, and they theoretically show that the corresponding problem is sound.
-
-\item{WGANs' advantages}
-
-WGANs does not require maintaining a careful balance in training of the discriminator and the generator, and does not require a careful design of the network architecture either.
-
-The mode dropping phenomenon that is typical in GANs is also drastically reduced.
-
-The most compelling benefit is the ability to continuously estimate the EM distance by training the discriminator to optimality. Plotting these learning curves is not only useful for debugging and hyperparameter searches, but also correlate remarkably well with the observed same quality.
-
-\end{itemize}
-
-If the real data distribution $P^{r}$ has a density and $P_{\theta}$ is the distribution of the density defined by the parametric family, then, the problem converts into minimizing the Kullback-Leibler divergence $KL(P_{r}||P_{\theta})$. For this new problem, we must have the density $P_{\theta}$ to exist. However, in practice, it is common that we deal with distributions supported by low dimensional manifolds, which leads to negligible intersection between true and model distribution resulting infinite KL divergence. In this case, adding noise to the model distribution fixes the problem, which explains why generative models include a noise component. However, this noise reduces the quality of the samples and makes them poor or blurry. In short, adding noise term is wrong, but is needed to make the maximum likelihood approach work.
-
-To solve this problem, without estimating the density $P_{r}$ which may not even exist, we can create a random variable $Z$ with a fixed distribution p(z) and pass that through a parametric function $g_{\theta}:Z -> X$ (a neural network in our case)
- that directly generates samples following a certain distribution $P_{\theta}$. By changing $\theta$, we can change this distribution and make it close to the real data distribution $P_{r}$.
-
- This is useful for two reasons. First, unlike densitites, this approach can represent distributions confined to a low dimensional manifold. Second, the ability to easily generate samples is often more useful than knowing the numerical value of the density (for example in image superresolution or semantic segmentation when considering the conditional distribution of the output image given the input image). In general, it is computationally difficult to generate samples given an arbitrary high dimensional density.
-
- Variational Auto-Encoders (VAEs) and GANs are well known examples of this approach. VAE focus on the approximate likelihood of the examples, they share the limitations of the standard models and need to fiddle with additional noise terms. GANs offer much more flexibility in the definition of the objective function, including Jensen-Shannon, and all f-divergence as well as some exotic combinations. On the other hand, training GANs is well known for being delicate and unstable, for reasons theoretically investigated in.
