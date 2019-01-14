@@ -13,6 +13,15 @@
     
     
     <item>
+      <title>Towards Deep Learning Models Resistant to Adversarial Attacks</title>
+      <link>https://bolor23erdene.github.io/posts/pgd/</link>
+      <pubDate>Mon, 14 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://bolor23erdene.github.io/posts/pgd/</guid>
+      <description>The goal of this paper is to train a machine learning model such that the ML system becomes resistance to adversarial examples. It is a well known fact that neural networks are vulnerable to adversarial examples. Some of the recent works explain that vulnerability of the neural networks is intrinsic. Madry et al. 2017 at MIT investigated how to create robust neural networks with robust optimization. As a result, they found a way to create successful attack and defense techniques based on robust optimization.</description>
+    </item>
+    
+    <item>
       <title>What is GANs?</title>
       <link>https://bolor23erdene.github.io/posts/gans/</link>
       <pubDate>Sat, 12 Jan 2019 00:00:00 +0000</pubDate>
