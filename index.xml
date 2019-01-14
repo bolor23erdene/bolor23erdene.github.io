@@ -156,7 +156,7 @@ The GANs optimize two deep models: Generator and Discriminator. Optimizing inter
 
 &lt;p&gt;In short contributions of the paper:&lt;/p&gt;
 
-&lt;p&gt;####Theoretical Analysis&lt;/p&gt;
+&lt;p&gt;Theoretical Analysis&lt;/p&gt;
 
 &lt;p&gt;They provide a comprehensive theoretical analysis of how the Earth Mover (EM) distance behaves in comparison to popular probability distances and divergences used in the context of learning distributions.&lt;/p&gt;
 

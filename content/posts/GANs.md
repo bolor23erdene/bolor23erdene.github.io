@@ -70,7 +70,7 @@ The most fundamental difference between such distance is their impact on the con
 
 In short contributions of the paper:
 
-####Theoretical Analysis
+Theoretical Analysis
 
 They provide a comprehensive theoretical analysis of how the Earth Mover (EM) distance behaves in comparison to popular probability distances and divergences used in the context of learning distributions.
 
