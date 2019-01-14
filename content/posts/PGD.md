@@ -51,7 +51,7 @@ the accuracy of more than 95% and 64%, respectively.
 
 ## What are the some math behind this magic? <a id="what"></a>
 
-$ \theta \in \R^{d})$ 
+$ \theta \in \mathbb{R}^{3})$ 
 
 D - training data distribution
 
