@@ -539,7 +539,7 @@ the accuracy of more than 95% and 64%, respectively.</p></li>
 <p>$ \theta \in \mathbb{R}^{d}$; D - training data distribution; $x \in \mathbb{R}^{d}$ training examples; $y \in [k]$ labels for corresponding
 examples; $L(\theta,x,y) - loss function$</p>
 
-<h3 id="the-goal-is-to-minimize-the-risk-e-x-y-d-l-x-y-theta">The goal is to minimize the risk $E_{(x,y)} ~ D[L(x,y,\theta)]$</h3>
+<h3 id="the-goal-is-to-minimize-the-risk-e-x-y-sim-d-l-x-y-theta">The goal is to minimize the risk $E_{(x,y)} \sim D[L(x,y,\theta)]$</h3>
 
 <p>This ERM is great for classifiers. But, it doesn&rsquo;t provide resistance to adversarial examples</p>
 
@@ -550,7 +550,7 @@ examples; $L(\theta,x,y) - loss function$</p>
 <ol>
 <li>They specify the attack model</li>
 <li>for each training example x, they introduce set of perturbations S \in \mathbb{R} that represents the manipulative power of adversary</li>
-<li>They modified the population risk $E<em>{d}[L]$ instead of feeding loss L with samples from original D distribution, they perturb the inputs. In this paper, they only focused on l</em>{infinity} bounded attacks.</li>
+<li>They modified the population risk $E<em>{d} [L]$ instead of feeding loss L with samples from original D distribution, they perturb the inputs. In this paper, they only focused on l</em>{\infinity} bounded attacks.</li>
 </ol>
 
 <p>They introduced the saddle point optimization problem. Inside is a maximization and outside is a minimization problem.</p>
