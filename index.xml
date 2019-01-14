@@ -105,12 +105,14 @@ examples; $L(\theta,x,y)$ - loss function&lt;/p&gt;
 &lt;h3 id=&#34;they-found-following-phenomena-during-their-experiments&#34;&gt;&lt;em&gt;They found following phenomena during their experiments&lt;/em&gt;&lt;/h3&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;p&gt;the loss achieved by the adversary increases in a fairly consistent way and plateaus rapidly when performing projected $l_{\infty}$ gradient descent for randomly chosen starting points inside x + S&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;the loss achieved by the adversary increases in a fairly consistent way and plateaus rapidly when performing projected $l_{\infty}$ gradient descent for randomly chosen starting points inside $x + S$&lt;/p&gt;&lt;/li&gt;
 
 &lt;li&gt;&lt;p&gt;Investigating the concentration of maxima further, they observed that over a large number of random restarts, the loss of the final iterate follows a well-concentrated distribution without extreme outliers.&lt;/p&gt;&lt;/li&gt;
 
 &lt;li&gt;&lt;p&gt;By applying SGD using the gradient descent of the loss at adversarial examples they can consistently reduced the loss of the saddle point problem during training.&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&#34;static/img/portrait.jpg&#34; target=&#34;_blank&#34;&gt;This is an image&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     
