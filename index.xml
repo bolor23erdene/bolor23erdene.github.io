@@ -67,7 +67,7 @@ the accuracy of more than 95% and 64%, respectively.&lt;/p&gt;&lt;/li&gt;
 
 &lt;p&gt;D - training data distribution&lt;/p&gt;
 
-&lt;p&gt;$x \in \R^d$ training examples, $y _in [k]$ labels for corresponding
+&lt;p&gt;$x \in \R^d$ training examples, $y \in [k]$ labels for corresponding
 examples&lt;/p&gt;
 
 &lt;p&gt;$L(\theta,x,y)$&lt;/p&gt;

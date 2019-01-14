@@ -55,7 +55,7 @@ $ \theta \in \R^{d})$
 
 D - training data distribution
 
-$x \in \R^d$ training examples, $y \_in [k]$ labels for corresponding 
+$x \in \R^d$ training examples, $y \in [k]$ labels for corresponding 
 examples
 
 $L(\theta,x,y)$
