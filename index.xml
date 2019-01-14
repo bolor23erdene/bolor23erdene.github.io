@@ -63,10 +63,10 @@ the accuracy of more than 95% and 64%, respectively.&lt;/p&gt;&lt;/li&gt;
 
 &lt;h2 id=&#34;what-are-the-some-math-behind-this-magic-a-id-what-a&#34;&gt;What are the some math behind this magic? &lt;a id=&#34;what&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
 
-&lt;p&gt;P_{data}&lt;/p&gt;
-
-&lt;p&gt;_theta _in _R^_{d} \newline
-D - training data distribution _newline, x \in \R^d training examples, y _in [k] labels for corresponding examples, L(\theta,x,y)&lt;/p&gt;
+&lt;p&gt;$_theta _in _R^_{d} \newline$
+D - training data distribution _newline
+$x \in \R^d$ training examples, $y _in [k]$ labels for corresponding examples
+L(\theta,x,y)&lt;/p&gt;
 
 &lt;h3 id=&#34;the-goal-is-to-minimize-the-risk-e-x-y-d-l-x-y-theta&#34;&gt;The goal is to minimize the risk E_(x,y) ~ D[L(x,y,\theta)]&lt;/h3&gt;
 
