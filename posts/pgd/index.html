@@ -514,7 +514,7 @@ Adversaries often create adversarial exmaples by modifying features of training 
 Previously, there were many defense techniques including defensive distillation, feature squeezing, and several others. They claim that these techniques don&rsquo;t offer a good understanding of the guarantees they provided. Their a natural saddle point formulation technique guarantees security to broad range of attacks. They were able to create attack and defense mechanisms with this technique. The adversarial training directly relates with optimizing the saddle point problem.</p></li>
 </ol>
 
-<h2 id="how-does-gans-work-a-id-how-a"><strong><em>How does GANs work?</em></strong> <a id="how"></a></h2>
+<h2 id="how-were-they-able-to-achieve-training-that-resulted-high-resistance-to-adversarial-examples-a-id-how-a"><strong><em>How were they able to achieve training that resulted high resistance to adversarial examples?</em></strong> <a id="how"></a></h2>
 
 <p>They make the following contributions:</p>
 
@@ -578,7 +578,7 @@ examples; $L(\theta,x,y)$ - loss function</p>
 <h3 id="they-found-following-phenomena-during-their-experiments"><em>They found following phenomena during their experiments</em></h3>
 
 <ul>
-<li><p>the loss achieved by the adversary increases in a fairly consistent way and plateaus rapidly when performing projected $l_{\infty} gradient descent for randomly chosen starting points inside x + S</p></li>
+<li><p>the loss achieved by the adversary increases in a fairly consistent way and plateaus rapidly when performing projected $l_{\infty}$ gradient descent for randomly chosen starting points inside x + S</p></li>
 
 <li><p>Investigating the concentration of maxima further, they observed that over a large number of random restarts, the loss of the final iterate follows a well-concentrated distribution without extreme outliers.</p></li>
 

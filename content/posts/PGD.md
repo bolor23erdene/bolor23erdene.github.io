@@ -31,7 +31,7 @@ Adversaries often create adversarial exmaples by modifying features of training 
 Previously, there were many defense techniques including defensive distillation, feature squeezing, and several others. They claim that these techniques don't offer a good understanding of the guarantees they provided. Their a natural saddle point formulation technique guarantees security to broad range of attacks. They were able to create attack and defense mechanisms with this technique. The adversarial training directly relates with optimizing the saddle point problem.  
 
 
-## ***How does GANs work?*** <a id="how"></a>
+## ***How were they able to achieve training that resulted high resistance to adversarial examples?*** <a id="how"></a>
 
 They make the following contributions:
 
@@ -85,7 +85,7 @@ They introduced the saddle point optimization problem. Inside is a maximization 
 
 ### *They found following phenomena during their experiments*
 
-- the loss achieved by the adversary increases in a fairly consistent way and plateaus rapidly when performing projected $l\_{\infty} gradient descent for randomly chosen starting points inside x + S
+- the loss achieved by the adversary increases in a fairly consistent way and plateaus rapidly when performing projected $l\_{\infty}$ gradient descent for randomly chosen starting points inside x + S
 
 - Investigating the concentration of maxima further, they observed that over a large number of random restarts, the loss of the final iterate follows a well-concentrated distribution without extreme outliers.
 
