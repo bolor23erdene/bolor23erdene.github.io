@@ -51,6 +51,8 @@ the accuracy of more than 95% and 64%, respectively.
 
 ## What are the some math behind this magic? <a id="what"></a>
 
+P\_{data}
+
 \_theta \_in \_R^_{d} \newline 
 D - training data distribution \_newline, x \in \R^d training examples, y \_in [k] labels for corresponding examples, L(\theta,x,y)
 
