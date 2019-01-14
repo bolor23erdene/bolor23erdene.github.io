@@ -24,8 +24,8 @@ The goal of this paper is to train a machine learning model such that the ML sys
 1. Growth in Machine Learning
 Application of machine learning has been exponentially increasing in recent years following the development in high computational power and data availability. Recent breakthroughs in computer vision and speech recognition enable us to ride on a self-driving car, make a restaurant or haircut order without touching phone screen, and  search what you need on youtube or google simply telling a few words. A new research study ["Machine Learning Market"](https://www.marketwatch.com/press-release/global-machine-learning-market-2018-expected-to-reach-3998-billion-by-2025-and-research-analysis-done-by-technologies-types-2018-08-20) states that the machine learning market is expected to grow from 1.3 billion USD in 2016 to 40 billion USD in 2025. For these reasons, security of machine learning has become one of the most important fields that needs to be studied.
 
-2. Robust neural networks 
-Adversaries often create adversarial exmaples by modifying features of training examples that are close to decision boundary. To create a robust neural networks resistant to these adversarial examples, one technique is to create adversarial examples using training examples close to decision boundary and train the neural networks with them. As a result, the neural networks become more robust. 
+2. Robust neural networks
+Adversaries often create adversarial exmaples by modifying features of training examples that are close to decision boundary. To create a robust neural networks resistant to these adversarial examples, one technique is to create adversarial examples using training examples close to decision boundary and train the neural networks with them. As a result, the neural networks become more robust.
 
 3. Why adversarial robust through robust optimization?
 Previously, there were many defense techniques including defensive distillation, feature squeezing, and several others. They claim that these techniques don't offer a good understanding of the guarantees they provided. Their a natural saddle point formulation technique guarantees security to broad range of attacks. They were able to create attack and defense mechanisms with this technique. The adversarial training directly relates with optimizing the saddle point problem.  
@@ -35,7 +35,7 @@ Previously, there were many defense techniques including defensive distillation,
 
 They make the following contributions:
 
-1. Optimization landscape study corresponding to saddle point formulation. Despite non-convexity and non-cavity of its constituent parts, they were able to track and solve the optimization problem using first-order methods. They created a projected gradient attack with the optimization technique using the first-order methods. 
+1. Optimization landscape study corresponding to saddle point formulation. Despite non-convexity and non-cavity of its constituent parts, they were able to track and solve the optimization problem using first-order methods. They created a projected gradient attack with the optimization technique using the first-order methods.
 
 2. They found the model architecture capacity on adversarial robustness is important. To reliably withstand strong adversarial attacks, networks
 require a significantly larger capacity than for correctly classifying benign examples only. This shows that a robust decision boundary of the saddle point problem can be significantly more complicated than a decision boundary that simply separates the benign data points.
@@ -51,7 +51,7 @@ the accuracy of more than 95% and 64%, respectively.
 
 ## ***What are the some math behind this magic?*** <a id="what"></a>
 
-$ \theta \in \mathbb{R}^{d}$; D - training data distribution; $x \in \mathbb{R}^{d}$ training examples; $y \in [k]$ labels for corresponding 
+$ \theta \in \mathbb{R}^{d}$; D - training data distribution; $x \in \mathbb{R}^{d}$ training examples; $y \in [k]$ labels for corresponding
 examples; $L(\theta,x,y)$ - loss function
 
 ### *The goal is to minimize the risk: $E_{(x,y)} \sim D[L(x,y,\theta)]$*
@@ -60,9 +60,33 @@ This ERM is great for classifiers. But, it doesn't provide resistance to adversa
 ### *How to make it robust?*
 To make the model resistant, they augmented the ERM by following steps.
 
-1. They specify the attack model
-2. For each training example x, they introduce set of perturbations $S \in \mathbb{R}^{d}$ that represents the manipulative power of adversary
+1. They specify the attack model and make the classifier more robust to this specific attack.
+2. For each training example x, they introduce set of perturbations $S \in \mathbb{R}^{d}$ that is  represented by the manipulative power of adversary
 3. They modified the population risk $E\_{d}[L]$ instead of feeding loss L with samples from original D distribution, they perturb the inputs. In this paper, they only focused on $l\_{\infty}$ bounded attacks.
 
 They introduced the saddle point optimization problem. Inside is a maximization and outside is a minimization problem.
 
+### *Challenges and solutions to them*
+- The goal is to obtain a solution for $\mathop{min}\_{\theta \in \mathbb{R}^{d}}E\_{(x,y) \sim D} [\mathop{max}\_{\delta \in S} L(\theta,x+\delta,y)]$
+
+- The inner part finding adversarial example is equivalent as maximizing highly non-concave function. Tool to solve this problem is PGD. PGD is a standard method for large-scale constrained optimization.
+
+- Important challenge is to obtain a good solution in a reasonable time.
+
+- Solving this problem requires non-convex outer minimization and non-concave inner maximization.
+
+- Their important contribution is to use PGD technique that solves the saddle point. They argue that loss landscape of the optimization problem is surprisingly tractable. The problem points towards projected gradient descent as the ultimate first order adversary.
+
+- Finding significantly low loss function after solving the optimization problem guarantees the classifier is resistant to adversarial examples.
+
+- They argue that the minimzation of the outer function in terms of \theta parameters is equivalent as solving the problem with stochastic gradient descent using the gradients solved by the inner maximization problem.
+
+- Basically, they stated that if the network is trained to be robust against PGD adversaries, it will be robust against a wide range of attacks that encompasses all current approaches.
+
+### *They found following phenomena during their experiments*
+
+- the loss achieved by the adversary increases in a fairly consistent way and plateaus rapidly when performing projected $l\_{\infty} gradient descent for randomly chosen starting points inside x + S
+
+- Investigating the concentration of maxima further, they observed that over a large number of random restarts, the loss of the final iterate follows a well-concentrated distribution without extreme outliers.
+
+- By applying SGD using the gradient descent of the loss at adversarial examples they can consistently reduced the loss of the saddle point problem during training.

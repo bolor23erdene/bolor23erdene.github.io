@@ -75,12 +75,42 @@ examples; $L(\theta,x,y)$ - loss function&lt;/p&gt;
 &lt;p&gt;To make the model resistant, they augmented the ERM by following steps.&lt;/p&gt;
 
 &lt;ol&gt;
-&lt;li&gt;They specify the attack model&lt;/li&gt;
-&lt;li&gt;For each training example x, they introduce set of perturbations $S \in \mathbb{R}^{d}$ that represents the manipulative power of adversary&lt;/li&gt;
+&lt;li&gt;They specify the attack model and make the classifier more robust to this specific attack.&lt;/li&gt;
+&lt;li&gt;For each training example x, they introduce set of perturbations $S \in \mathbb{R}^{d}$ that is  represented by the manipulative power of adversary&lt;/li&gt;
 &lt;li&gt;They modified the population risk $E_{d}[L]$ instead of feeding loss L with samples from original D distribution, they perturb the inputs. In this paper, they only focused on $l_{\infty}$ bounded attacks.&lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;p&gt;They introduced the saddle point optimization problem. Inside is a maximization and outside is a minimization problem.&lt;/p&gt;
+
+&lt;h3 id=&#34;challenges-and-solutions-to-them&#34;&gt;&lt;em&gt;Challenges and solutions to them&lt;/em&gt;&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;The goal is to obtain a solution for $\mathop{min}_{\theta \in \mathbb{R}^{d}}E_{(x,y) \sim D} [\mathop{max}_{\delta \in S} L(\theta,x+\delta,y)]$&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;The inner part finding adversarial example is equivalent as maximizing highly non-concave function. Tool to solve this problem is PGD. PGD is a standard method for large-scale constrained optimization.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Important challenge is to obtain a good solution in a reasonable time.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Solving this problem requires non-convex outer minimization and non-concave inner maximization.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Their important contribution is to use PGD technique that solves the saddle point. They argue that loss landscape of the optimization problem is surprisingly tractable. The problem points towards projected gradient descent as the ultimate first order adversary.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Finding significantly low loss function after solving the optimization problem guarantees the classifier is resistant to adversarial examples.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;They argue that the minimzation of the outer function in terms of \theta parameters is equivalent as solving the problem with stochastic gradient descent using the gradients solved by the inner maximization problem.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Basically, they stated that if the network is trained to be robust against PGD adversaries, it will be robust against a wide range of attacks that encompasses all current approaches.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;they-found-following-phenomena-during-their-experiments&#34;&gt;&lt;em&gt;They found following phenomena during their experiments&lt;/em&gt;&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;the loss achieved by the adversary increases in a fairly consistent way and plateaus rapidly when performing projected $l_{\infty} gradient descent for randomly chosen starting points inside x + S&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Investigating the concentration of maxima further, they observed that over a large number of random restarts, the loss of the final iterate follows a well-concentrated distribution without extreme outliers.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;By applying SGD using the gradient descent of the loss at adversarial examples they can consistently reduced the loss of the saddle point problem during training.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
 </description>
     </item>
     
