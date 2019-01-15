@@ -47,7 +47,7 @@ KKT provides a very general solution to constrained optimization. With KKT, we i
 - We introduce KKT multipliers $\lambda\_{i}$ and $\alpha\_{i}$ for each constraint.
 
 The generalized Lagrangian is:
-$L(x,\lambda,\alpha) = f(x) + \sum\_{i}^{} \lambda\_{i}g^{(i)}(x) + \sum\_{j}\alpha\_{j}h^{(j)}(x)$
+$L(x,\lambda,\alpha) = f(x) + \sum\limits\_{i} \lambda\_{i}g^{(i)}(x) + \sum\limits\_{j}\alpha\_{j}h^{(j)}(x)$
 
 ### *Challenges and solutions to them*
 - The goal is to obtain a solution for $\mathop{min}\_{\theta \in \mathbb{R}^{d}}E\_{(x,y) \sim D} [\mathop{max}\_{\delta \in S} L(\theta,x+\delta,y)]$

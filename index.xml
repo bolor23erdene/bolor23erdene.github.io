@@ -63,7 +63,7 @@
 &lt;/ul&gt;
 
 &lt;p&gt;The generalized Lagrangian is:
-$L(x,\lambda,\alpha) = f(x) + \sum_{i}^{} \lambda_{i}g^{(i)}(x) + \sum_{j}\alpha_{j}h^{(j)}(x)$&lt;/p&gt;
+$L(x,\lambda,\alpha) = f(x) + \sum\limits_{i} \lambda_{i}g^{(i)}(x) + \sum\limits_{j}\alpha_{j}h^{(j)}(x)$&lt;/p&gt;
 
 &lt;h3 id=&#34;challenges-and-solutions-to-them&#34;&gt;&lt;em&gt;Challenges and solutions to them&lt;/em&gt;&lt;/h3&gt;
 
