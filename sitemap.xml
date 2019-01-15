@@ -4,6 +4,14 @@
     
     <url>
     
+      <loc>https://bolor23erdene.github.io/posts/svm_kkt/</loc>
+      <lastmod>2019-01-15T00:00:00+00:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
       <loc>https://bolor23erdene.github.io/posts/pgd/</loc>
       <lastmod>2019-01-14T00:00:00+00:00</lastmod>
     </url>
@@ -86,6 +94,15 @@
     
     <url>
     
+      <loc>https://bolor23erdene.github.io/tags/lsml/</loc>
+      <lastmod>2019-01-15T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
       <loc>https://bolor23erdene.github.io/publication_types/</loc>
       <priority>0</priority>
     </url>
@@ -123,6 +140,24 @@
     
       <loc>https://bolor23erdene.github.io/categories/causal-inference/</loc>
       <lastmod>2018-07-25T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://bolor23erdene.github.io/categories/coursework/</loc>
+      <lastmod>2019-01-15T00:00:00+00:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <loc>https://bolor23erdene.github.io/categories/optimization/</loc>
+      <lastmod>2019-01-15T00:00:00+00:00</lastmod>
       <priority>0</priority>
     </url>
     

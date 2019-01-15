@@ -11,6 +11,73 @@
     <atom:link href="/" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Support Vector Machine and Karush-Kuhn-Tucker</title>
+      <link>https://bolor23erdene.github.io/posts/svm_kkt/</link>
+      <pubDate>Tue, 15 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://bolor23erdene.github.io/posts/svm_kkt/</guid>
+      <description>
+
+&lt;p&gt;This article is a brief introduction about SVM and KKT.&lt;/p&gt;
+
+&lt;h2 id=&#34;table-of-contents&#34;&gt;Table of Contents&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&#34;#svm&#34;&gt;SVM&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#kkt&#34;&gt;KKT&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&#34;support-vector-machine-a-id-svm-a&#34;&gt;&lt;strong&gt;&lt;em&gt;Support Vector Machine&lt;/em&gt;&lt;/strong&gt; &lt;a id=&#34;svm&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+
+&lt;p&gt;Support Vector Machine is one of the most influential techniques in supervised machine learning (Boser et al. 1992; Cortes and Vapnik et al. 1995). It is very similar to logistic regression. The main difference is it does not output probability, but, a class identity instead. SVM predicts a positive class is present when $w^Tx+b$ is positive. Similarly, SVM predicts a negative class is present when $w^Tx+b$ is negative.&lt;/p&gt;
+
+&lt;p&gt;The key innovation with SVM is kernel trick. Kernel trick is a technique that many ML algorithms can be written in terms of dot products between examples. In fact, one does not need to map the training examples for optimization. Kernel trick is powerful for 2 reasons.
+&amp;gt; It enables to learn nonlinear models as a function of x using convex optimization techniques that provides efficient convergence.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Kernel function k can be implemented computationally efficient instead of naively creating $\phi(x)$ vectors and explicitly computing their dot product.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;The most commonly used kernel is the Gaussian kernel. The Gaussian kernel is similar to template matching. A training example x with training label y becomes a template for class y. If a test point x&amp;rsquo; is near x by Euclidean distance, the Gaussian kernel has a large response, which indicates that x&amp;rsquo; is very similar to x template. The model assigns a large weight on the associated training label y. Overall, the prediction will combine many such training labels weighted by the similarity of the corresponding training examples.&lt;/p&gt;
+
+&lt;h2 id=&#34;karush-kuhn-tucker-a-id-kkt-a&#34;&gt;&lt;strong&gt;&lt;em&gt;Karush-Kuhn-Tucker&lt;/em&gt;&lt;/strong&gt; &lt;a id=&#34;kkt&#34;&gt;&lt;/a&gt;&lt;/h2&gt;
+
+&lt;p&gt;Sometimes we need not only to minimize or maximize a function $f(x)$ over all possible values of x but also to find max or min value of $f(x)$ for value of x in some set $\mathbb{S}$. There are two possible ways to solve this problem.
+- The simple way is to make gradient descent steps and project the result back into $\mathbb{S}$.
+- The sophisticated way is to design a different, unconstrained optimization problem whose solution can be converted into solution of our constrained optimization problem.&lt;/p&gt;
+
+&lt;p&gt;KKT provides a very general solution to constrained optimization. With KKT, we introduce a new function called generalized Lagrangian function.
+- We describe $\mathbb{S}$ in terms of equations and inequalities.
+- We want a description of $\mathbb{S}$ in terms of m functions $g(i)$ and n functions $h(j)$.
+- $g(i)$ are equality constraints and $h(j)$ are inequality constraints.
+- We introduce KKT multipliers $\lambda_{i}$ and $\alpha_{i}$ for each constraint.&lt;/p&gt;
+
+&lt;p&gt;The generalized Lagrangian is:
+$L(x,\lambda,\alpha) = f(x) + \sum_{i}\lambda_{i}g^{(i)}(x) + \sum_{j}\alpha_{j}h^{(j)}(x)$&lt;/p&gt;
+
+&lt;h3 id=&#34;challenges-and-solutions-to-them&#34;&gt;&lt;em&gt;Challenges and solutions to them&lt;/em&gt;&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;The goal is to obtain a solution for $\mathop{min}_{\theta \in \mathbb{R}^{d}}E_{(x,y) \sim D} [\mathop{max}_{\delta \in S} L(\theta,x+\delta,y)]$&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Basically, they stated that if the network is trained to be robust against PGD adversaries, it will be robust against a wide range of attacks that encompasses all current approaches.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;they-found-following-phenomena-during-their-experiments&#34;&gt;&lt;em&gt;They found following phenomena during their experiments&lt;/em&gt;&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;the loss achieved by the adversary increases in a fairly consistent way and plateaus rapidly when performing projected $l_{\infty}$ gradient descent for randomly chosen starting points inside $x + S$&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Investigating the concentration of maxima further, they observed that over a large number of random restarts, the loss of the final iterate follows a well-concentrated distribution without extreme outliers.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;By applying SGD using the gradient descent of the loss at adversarial examples they can consistently reduced the loss of the saddle point problem during training.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://bolor23erdene.github.io/static/PGD/loss.png&#34; alt=&#34;This is an image&#34; /&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Towards Deep Learning Models Resistant to Adversarial Attacks</title>
       <link>https://bolor23erdene.github.io/posts/pgd/</link>
       <pubDate>Mon, 14 Jan 2019 00:00:00 +0000</pubDate>
