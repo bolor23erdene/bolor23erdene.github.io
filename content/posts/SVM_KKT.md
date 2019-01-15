@@ -31,17 +31,23 @@ The most commonly used kernel is the Gaussian kernel. The Gaussian kernel is sim
 
 ## ***Karush-Kuhn-Tucker*** <a id="kkt"></a>
 Sometimes we need not only to minimize or maximize a function $f(x)$ over all possible values of x but also to find max or min value of $f(x)$ for value of x in some set $\mathbb{S}$. There are two possible ways to solve this problem.
+
 - The simple way is to make gradient descent steps and project the result back into $\mathbb{S}$.
+
 - The sophisticated way is to design a different, unconstrained optimization problem whose solution can be converted into solution of our constrained optimization problem.  
 
 KKT provides a very general solution to constrained optimization. With KKT, we introduce a new function called generalized Lagrangian function.
+
 - We describe $\mathbb{S}$ in terms of equations and inequalities.
+
 - We want a description of $\mathbb{S}$ in terms of m functions $g(i)$ and n functions $h(j)$.
+
 - $g(i)$ are equality constraints and $h(j)$ are inequality constraints.
+
 - We introduce KKT multipliers $\lambda\_{i}$ and $\alpha\_{i}$ for each constraint.
 
 The generalized Lagrangian is:
-$L(x,\lambda,\alpha) = f(x) + \sum\_{i}\lambda\_{i}g^{(i)}(x) + \sum\_{j}\alpha\_{j}h^{(j)}(x)$
+$L(x,\lambda,\alpha) = f(x) + \sum\_{i}^{} \lambda\_{i}g^{(i)}(x) + \sum\_{j}\alpha\_{j}h^{(j)}(x)$
 
 ### *Challenges and solutions to them*
 - The goal is to obtain a solution for $\mathop{min}\_{\theta \in \mathbb{R}^{d}}E\_{(x,y) \sim D} [\mathop{max}\_{\delta \in S} L(\theta,x+\delta,y)]$

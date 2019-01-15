@@ -517,18 +517,28 @@ Table of Contents  SVM KKT  Support Vector Machine  Support Vector Machine is on
 
 <h2 id="karush-kuhn-tucker-a-id-kkt-a"><strong><em>Karush-Kuhn-Tucker</em></strong> <a id="kkt"></a></h2>
 
-<p>Sometimes we need not only to minimize or maximize a function $f(x)$ over all possible values of x but also to find max or min value of $f(x)$ for value of x in some set $\mathbb{S}$. There are two possible ways to solve this problem.
-- The simple way is to make gradient descent steps and project the result back into $\mathbb{S}$.
-- The sophisticated way is to design a different, unconstrained optimization problem whose solution can be converted into solution of our constrained optimization problem.</p>
+<p>Sometimes we need not only to minimize or maximize a function $f(x)$ over all possible values of x but also to find max or min value of $f(x)$ for value of x in some set $\mathbb{S}$. There are two possible ways to solve this problem.</p>
 
-<p>KKT provides a very general solution to constrained optimization. With KKT, we introduce a new function called generalized Lagrangian function.
-- We describe $\mathbb{S}$ in terms of equations and inequalities.
-- We want a description of $\mathbb{S}$ in terms of m functions $g(i)$ and n functions $h(j)$.
-- $g(i)$ are equality constraints and $h(j)$ are inequality constraints.
-- We introduce KKT multipliers $\lambda_{i}$ and $\alpha_{i}$ for each constraint.</p>
+<ul>
+<li><p>The simple way is to make gradient descent steps and project the result back into $\mathbb{S}$.</p></li>
+
+<li><p>The sophisticated way is to design a different, unconstrained optimization problem whose solution can be converted into solution of our constrained optimization problem.</p></li>
+</ul>
+
+<p>KKT provides a very general solution to constrained optimization. With KKT, we introduce a new function called generalized Lagrangian function.</p>
+
+<ul>
+<li><p>We describe $\mathbb{S}$ in terms of equations and inequalities.</p></li>
+
+<li><p>We want a description of $\mathbb{S}$ in terms of m functions $g(i)$ and n functions $h(j)$.</p></li>
+
+<li><p>$g(i)$ are equality constraints and $h(j)$ are inequality constraints.</p></li>
+
+<li><p>We introduce KKT multipliers $\lambda_{i}$ and $\alpha_{i}$ for each constraint.</p></li>
+</ul>
 
 <p>The generalized Lagrangian is:
-$L(x,\lambda,\alpha) = f(x) + \sum_{i}\lambda_{i}g^{(i)}(x) + \sum_{j}\alpha_{j}h^{(j)}(x)$</p>
+$L(x,\lambda,\alpha) = f(x) + \sum_{i}^{} \lambda_{i}g^{(i)}(x) + \sum_{j}\alpha_{j}h^{(j)}(x)$</p>
 
 <h3 id="challenges-and-solutions-to-them"><em>Challenges and solutions to them</em></h3>
 
