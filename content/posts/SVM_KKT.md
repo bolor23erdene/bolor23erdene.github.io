@@ -49,18 +49,9 @@ KKT provides a very general solution to constrained optimization. With KKT, we i
 The generalized Lagrangian is:
 $L(x,\lambda,\alpha) = f(x) + \sum\limits\_{i} \lambda\_{i}g^{(i)}(x) + \sum\limits\_{j}\alpha\_{j}h^{(j)}(x)$
 
-### *Challenges and solutions to them*
-- The goal is to obtain a solution for $\mathop{min}\_{\theta \in \mathbb{R}^{d}}E\_{(x,y) \sim D} [\mathop{max}\_{\delta \in S} L(\theta,x+\delta,y)]$
+## From Convex Optimization book slides:
 
 
-- Basically, they stated that if the network is trained to be robust against PGD adversaries, it will be robust against a wide range of attacks that encompasses all current approaches.
+![This is an image](/static/PGD/KKT1.png)
+![This is an image](/static/PGD/KKT2.png)
 
-### *They found following phenomena during their experiments*
-
-- the loss achieved by the adversary increases in a fairly consistent way and plateaus rapidly when performing projected $l\_{\infty}$ gradient descent for randomly chosen starting points inside $x + S$
-
-- Investigating the concentration of maxima further, they observed that over a large number of random restarts, the loss of the final iterate follows a well-concentrated distribution without extreme outliers.
-
-- By applying SGD using the gradient descent of the loss at adversarial examples they can consistently reduced the loss of the saddle point problem during training.
-
-![This is an image](/static/PGD/loss.png)

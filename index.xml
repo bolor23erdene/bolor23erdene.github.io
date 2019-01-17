@@ -65,25 +65,10 @@
 &lt;p&gt;The generalized Lagrangian is:
 $L(x,\lambda,\alpha) = f(x) + \sum\limits_{i} \lambda_{i}g^{(i)}(x) + \sum\limits_{j}\alpha_{j}h^{(j)}(x)$&lt;/p&gt;
 
-&lt;h3 id=&#34;challenges-and-solutions-to-them&#34;&gt;&lt;em&gt;Challenges and solutions to them&lt;/em&gt;&lt;/h3&gt;
+&lt;h2 id=&#34;from-convex-optimization-book-slides&#34;&gt;From Convex Optimization book slides:&lt;/h2&gt;
 
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;The goal is to obtain a solution for $\mathop{min}_{\theta \in \mathbb{R}^{d}}E_{(x,y) \sim D} [\mathop{max}_{\delta \in S} L(\theta,x+\delta,y)]$&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Basically, they stated that if the network is trained to be robust against PGD adversaries, it will be robust against a wide range of attacks that encompasses all current approaches.&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&#34;they-found-following-phenomena-during-their-experiments&#34;&gt;&lt;em&gt;They found following phenomena during their experiments&lt;/em&gt;&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;the loss achieved by the adversary increases in a fairly consistent way and plateaus rapidly when performing projected $l_{\infty}$ gradient descent for randomly chosen starting points inside $x + S$&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Investigating the concentration of maxima further, they observed that over a large number of random restarts, the loss of the final iterate follows a well-concentrated distribution without extreme outliers.&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;By applying SGD using the gradient descent of the loss at adversarial examples they can consistently reduced the loss of the saddle point problem during training.&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://bolor23erdene.github.io/static/PGD/loss.png&#34; alt=&#34;This is an image&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://bolor23erdene.github.io/static/PGD/KKT1.png&#34; alt=&#34;This is an image&#34; /&gt;
+&lt;img src=&#34;https://bolor23erdene.github.io/static/PGD/KKT2.png&#34; alt=&#34;This is an image&#34; /&gt;&lt;/p&gt;
 </description>
     </item>
     
