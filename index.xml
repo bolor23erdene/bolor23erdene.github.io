@@ -67,8 +67,8 @@ $L(x,\lambda,\alpha) = f(x) + \sum\limits_{i} \lambda_{i}g^{(i)}(x) + \sum\limit
 
 &lt;h2 id=&#34;from-convex-optimization-book-slides&#34;&gt;From Convex Optimization book slides:&lt;/h2&gt;
 
-&lt;p&gt;&lt;img src=&#34;https://bolor23erdene.github.io/static/PGD/KKT1.png&#34; alt=&#34;This is an image&#34; /&gt;
-&lt;img src=&#34;https://bolor23erdene.github.io/static/PGD/KKT2.png&#34; alt=&#34;This is an image&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://bolor23erdene.github.io/static/KKT/KKT1.png&#34; alt=&#34;This is an image&#34; /&gt;
+&lt;img src=&#34;https://bolor23erdene.github.io/static/KKT/KKT2.png&#34; alt=&#34;This is an image&#34; /&gt;&lt;/p&gt;
 </description>
     </item>
     

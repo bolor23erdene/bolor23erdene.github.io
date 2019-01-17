@@ -52,6 +52,6 @@ $L(x,\lambda,\alpha) = f(x) + \sum\limits\_{i} \lambda\_{i}g^{(i)}(x) + \sum\lim
 ## From Convex Optimization book slides:
 
 
-![This is an image](/static/PGD/KKT1.png)
-![This is an image](/static/PGD/KKT2.png)
+![This is an image](/static/KKT/KKT1.png)
+![This is an image](/static/KKT/KKT2.png)
 
