@@ -16,12 +16,12 @@ weight = 5
 
 # List your qualifications (such as academic degrees).
 [[education.courses]]
-  course = "PhD in Computer Science and Engineering"
+  course = "MS in Computer Science and Engineering"
   institution = "Pennsylvania State University"
-  year = 2021
+  year = 2020
 
 [[education.courses]]
-  course = "MS in Computational Science and Aersp. Eng"
+  course = "MS in Aerospace Engineering"
   institution = "Pennsylvania State University"
   year = 2018
 
