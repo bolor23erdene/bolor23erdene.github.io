@@ -15,7 +15,7 @@ list_format = 3
 image = ""
 caption = ""
 +++
-
+"""
 #### <span style="color:red">Submitted/In Preparation</span>
 
 * Excess Risk Bound for Exponentially Concave Losses [Abstract] [arXiv]
@@ -44,3 +44,4 @@ Electronic Journal of Statistics, 2017
 * **Random Projections for Classification: A Recovery Approach** [Abstract] [Slides]
 with Lijun Zhang, Rong Jin, Tianbao Yang, and Shenghuo Zhu
 IEEE Transactions on Information Theory, 2014.
+"""
