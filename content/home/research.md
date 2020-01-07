@@ -28,11 +28,11 @@ date_format = "January 2006"
   date_start = "2018-05-08"
   date_end = "2020-05-08"
   description = "Fooling Network Intrusion Detection with GANs"
-  Responsibilities include:
-
+  
+"""Responsibilities include:
 
 * Created state-of-the-art attack algorithm achieving 100% success rate fooling intrusion detection systems.
-* Trained models on CICIDS-2017 and NSL-KDD network datasets and classified them with accuracy as high as 98%.
+* Trained models on CICIDS-2017 and NSL-KDD network datasets and classified them with accuracy as high as 98%."""
 
 [[experience]]
   title = "Research Assistant"
@@ -42,12 +42,11 @@ date_format = "January 2006"
   date_start = "2018-05-08"
   date_end = "2017-01-08"
   description = "Noise Reduction of Distributed Electric Propulsion Aircraft"
-  Responsibilities include:
+"""  Responsibilities include:
 *  Research noise reduction of small DEP-aircraft (8-9 passenger) design project funded by NASA Langley
 *  Implemented system that designs propellers & converts the output into an input for PSUWOPWOP noise prediction code
+"""
 
-
-  """
 
 [[experience]]
   title = "Teaching Assistant"
@@ -57,7 +56,8 @@ date_format = "January 2006"
   date_start = "2016-05-08"
   date_end = "2016-12-20"
   description = "Aerodynamics"
-
+"""  Responsibilities include:
 *  Grading 50-60 students’ homework each week, as well as quizzes, and exams
 *  Holding office hours, supporting students’ learning activities, and helping in development
+"""
 +++
