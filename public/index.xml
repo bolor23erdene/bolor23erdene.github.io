@@ -1,14 +1,93 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Academic on Academic</title>
+    <title>Bolor-Erdene Zolbayar on Bolor-Erdene Zolbayar</title>
     <link>https://bolor23erdene.github.io/</link>
-    <description>Recent content in Academic on Academic</description>
+    <description>Recent content in Bolor-Erdene Zolbayar on Bolor-Erdene Zolbayar</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2018</copyright>
-    <lastBuildDate>Sun, 15 Oct 2017 00:00:00 -0400</lastBuildDate>
+    <lastBuildDate>Tue, 15 Jan 2019 00:00:00 +0000</lastBuildDate>
     <atom:link href="/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Journal</title>
+      <link>https://bolor23erdene.github.io/journal/</link>
+      <pubDate>Sun, 01 Jan 2017 00:00:00 -0600</pubDate>
+      
+      <guid>https://bolor23erdene.github.io/journal/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Posts</title>
+      <link>https://bolor23erdene.github.io/posts/</link>
+      <pubDate>Sun, 01 Jan 2017 00:00:00 -0600</pubDate>
+      
+      <guid>https://bolor23erdene.github.io/posts/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Projects</title>
+      <link>https://bolor23erdene.github.io/projects/</link>
+      <pubDate>Sun, 01 Jan 2017 00:00:00 -0600</pubDate>
+      
+      <guid>https://bolor23erdene.github.io/projects/</guid>
+      <description>&lt;h4 id=&#34;span-stylecolorredsubmittedin-preparationspan&#34;&gt;&lt;!-- raw HTML omitted --&gt;Submitted/In Preparation&lt;!-- raw HTML omitted --&gt;&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;span-stylecolorredjournalspan&#34;&gt;&lt;!-- raw HTML omitted --&gt;Journal&lt;!-- raw HTML omitted --&gt;&lt;/h4&gt;
+&lt;hr&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Service/Awards</title>
+      <link>https://bolor23erdene.github.io/sewards/</link>
+      <pubDate>Sun, 01 Jan 2017 00:00:00 -0600</pubDate>
+      
+      <guid>https://bolor23erdene.github.io/sewards/</guid>
+      <description>&lt;p&gt;&amp;quot;&amp;rdquo;&amp;rdquo;&lt;/p&gt;
+&lt;h4 id=&#34;span-stylecolorredsubmittedin-preparationspan&#34;&gt;&lt;!-- raw HTML omitted --&gt;Submitted/In Preparation&lt;!-- raw HTML omitted --&gt;&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Excess Risk Bound for Exponentially Concave Losses [Abstract] [arXiv]
+with Rong Jin&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Binary Excess Risk for Smooth Convex Surrogates [Abstract] [arXiv]
+with Lijun Zhang and Rong Jin&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Beating the Minimax Rate of Active Learning with Prior Knowledge [Abstract] [arXiv]
+with Lijun Zhang and Rong Jin&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Sparse Multiple Kernel Learning with Geometric Convergence Rate [Abstract] [arXiv]
+with Rong Jin and Tianbao Yang&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Efficient Constrained Regret Minimization [Abstract] [arXiv]
+with Tianbao Yang and Rong Jin&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;span-stylecolorredjournalspan&#34;&gt;&lt;!-- raw HTML omitted --&gt;Journal&lt;!-- raw HTML omitted --&gt;&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Sketching meets random projection in the dual: A provable recovery algorithm for big and high-dimensional data&lt;/strong&gt;
+Jialei Wang, Jason D. Lee, Mehrdad Mahdavi, Mladen Kolar, and Nathan Srebro
+Electronic Journal of Statistics, 2017&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Random Projections for Classification: A Recovery Approach&lt;/strong&gt; [Abstract] [Slides]
+with Lijun Zhang, Rong Jin, Tianbao Yang, and Shenghuo Zhu
+IEEE Transactions on Information Theory, 2014.
+&amp;quot;&amp;rdquo;&amp;rdquo;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
     
   </channel>
 </rss>
