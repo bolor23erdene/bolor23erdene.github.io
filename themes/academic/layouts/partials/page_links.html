@@ -1,10 +1,9 @@
 {{ $is_list := .is_list }}
-{{ $page := .page }}
+{{ $ := .content }}
 {{ $link := "" }}
 
-{{/* ***** TODO: Deprecate `url_preprint` in favour of `url_pdf` given there's now a dedicated "Preprint" pub. type. ***** */}}
-{{ with $page.Params.url_preprint }}
-  {{ $resource := $page.Resources.GetMatch . }}
+{{ with $.Params.url_preprint }}
+  {{ $resource := $.Resources.GetMatch . }}
   {{ if $resource }}
     {{ $link = $resource.RelPermalink }}
   {{ else }}
@@ -15,29 +14,28 @@
 </a>
 {{ end }}
 {{ $pdf := "" }}
-{{ $resource := $page.Resources.GetMatch (printf "%s.pdf" $page.File.ContentBaseName) }}
+{{ $resource := $.Resources.GetMatch (printf "%s.pdf" $.File.ContentBaseName) }}
 {{ with $resource }}
   {{ $pdf = .RelPermalink }}
 {{ else }}
-  {{ if $page.Params.url_pdf }}
-    {{ $pdf = $page.Params.url_pdf | relURL }}
+  {{ if $.Params.url_pdf }}
+    {{ $pdf = $.Params.url_pdf | relURL }}
   {{ end }}
 {{ end }}
-
 {{ with $pdf }}
 <a class="btn btn-outline-primary my-1 mr-1{{ if $is_list }} btn-sm{{end}}" href="{{ . }}" target="_blank" rel="noopener">
   {{ i18n "btn_pdf" }}
 </a>
 {{ end }}
-{{ $resource := $page.Resources.GetMatch "cite.bib" }}
+{{ $resource := $.Resources.GetMatch "*.bib" }}
 {{ with $resource }}
 <button type="button" class="btn btn-outline-primary my-1 mr-1{{ if $is_list }} btn-sm{{end}} js-cite-modal"
         data-filename="{{ .RelPermalink }}">
   {{ i18n "btn_cite" }}
 </button>
 {{ end }}
-{{ with $page.Params.url_code }}
-  {{ $resource := $page.Resources.GetMatch . }}
+{{ with $.Params.url_code }}
+  {{ $resource := $.Resources.GetMatch . }}
   {{ if $resource }}
     {{ $link = $resource.RelPermalink }}
   {{ else }}
@@ -47,8 +45,8 @@
   {{ i18n "btn_code" }}
 </a>
 {{ end }}
-{{ with $page.Params.url_dataset }}
-  {{ $resource := $page.Resources.GetMatch . }}
+{{ with $.Params.url_dataset }}
+  {{ $resource := $.Resources.GetMatch . }}
   {{ if $resource }}
     {{ $link = $resource.RelPermalink }}
   {{ else }}
@@ -58,25 +56,25 @@
   {{ i18n "btn_dataset" }}
 </a>
 {{ end }}
-{{ if $page.Params.projects }}
-{{ range $page.Params.projects }}
-  {{ with (site.GetPage (printf "project/%s" .)) }}
+{{ if $.Params.projects }}
+{{ range $.Params.projects }}
+  {{ with ($.Site.GetPage (printf "project/%s" .)) }}
   <a class="btn btn-outline-primary my-1 mr-1{{ if $is_list }} btn-sm{{end}}" href="{{ .RelPermalink }}">
     {{ i18n "btn_project" }}
   </a>
   {{ else }}
-    {{/* errorf "The `projects` parameter in `content/%s` references a project file, `content/project/%s`, which cannot be found. Please either set `projects = []` or fix the reference." $page.File.Path . */}}
+    {{/* errorf "The `projects` parameter in `content/%s` references a project file, `content/project/%s`, which cannot be found. Please either set `projects = []` or fix the reference." $.File.Path . */}}
   {{ end }}
 {{ end }}
 {{ else }}
-{{ with $page.Params.url_project }}
+{{ with $.Params.url_project }}
 <a class="btn btn-outline-primary my-1 mr-1{{ if $is_list }} btn-sm{{end}}" href="{{ . }}" target="_blank" rel="noopener">
   {{ i18n "btn_project" }}
 </a>
 {{ end }}
 {{ end }}
-{{ with $page.Params.url_poster }}
-  {{ $resource := $page.Resources.GetMatch . }}
+{{ with $.Params.url_poster }}
+  {{ $resource := $.Resources.GetMatch . }}
   {{ if $resource }}
     {{ $link = $resource.RelPermalink }}
   {{ else }}
@@ -86,15 +84,15 @@
   {{ i18n "btn_poster" }}
 </a>
 {{ end }}
-{{ if $page.Params.slides }}
-  {{ with (site.GetPage (printf "slides/%s" $page.Params.slides)) }}
+{{ if $.Params.slides }}
+  {{ with ($.Site.GetPage (printf "slides/%s" $.Params.slides)) }}
   <a class="btn btn-outline-primary my-1 mr-1{{ if $is_list }} btn-sm{{end}}" href="{{ .RelPermalink }}" target="_blank">
     {{ i18n "btn_slides" }}
   </a>
   {{ end }}
 {{ else }}
-{{ with $page.Params.url_slides }}
-  {{ $resource := $page.Resources.GetMatch . }}
+{{ with $.Params.url_slides }}
+  {{ $resource := $.Resources.GetMatch . }}
   {{ if $resource }}
     {{ $link = $resource.RelPermalink }}
   {{ else }}
@@ -105,8 +103,8 @@
 </a>
 {{ end }}
 {{ end }}
-{{ with $page.Params.url_video }}
-  {{ $resource := $page.Resources.GetMatch . }}
+{{ with $.Params.url_video }}
+  {{ $resource := $.Resources.GetMatch . }}
   {{ if $resource }}
     {{ $link = $resource.RelPermalink }}
   {{ else }}
@@ -116,8 +114,8 @@
   {{ i18n "btn_video" }}
 </a>
 {{ end }}
-{{ with $page.Params.url_source }}
-  {{ $resource := $page.Resources.GetMatch . }}
+{{ with $.Params.url_source }}
+  {{ $resource := $.Resources.GetMatch . }}
   {{ if $resource }}
     {{ $link = $resource.RelPermalink }}
   {{ else }}
@@ -127,26 +125,26 @@
   {{ i18n "btn_source" }}
 </a>
 {{ end }}
-{{ with $page.Params.doi }}
+{{ with $.Params.doi }}
 <a class="btn btn-outline-primary my-1 mr-1{{ if $is_list }} btn-sm{{end}}" href="https://doi.org/{{ . }}" target="_blank" rel="noopener">
   DOI
 </a>
 {{ end }}
-{{ range $page.Params.links }}
+{{ range $.Params.url_custom }}
   {{ $pack := or .icon_pack "fas" }}
   {{ $pack_prefix := $pack }}
   {{ if in (slice "fab" "fas" "far" "fal") $pack }}
     {{ $pack_prefix = "fa" }}
   {{ end }}
-  {{ $link := .url | default "" }}
+  {{ $link := .url }}
   {{ $scheme := (urls.Parse $link).Scheme }}
   {{ $target := "" }}
   {{ if not $scheme }}
-    {{ $resource := $page.Resources.GetMatch $link }}
+    {{ $resource := $.Resources.GetMatch .url }}
     {{ if $resource }}
       {{ $link = $resource.RelPermalink }}
     {{ else }}
-      {{ $link = $link | relURL }}
+      {{ $link = .url | relURL }}
     {{ end }}
   {{ else if in (slice "http" "https") $scheme }}
     {{ $target = "target=\"_blank\" rel=\"noopener\"" }}

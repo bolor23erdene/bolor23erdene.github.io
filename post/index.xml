@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Bolor-Erdene Zolbayar</title>
+    <link>https://bolor23erdene.github.io/post/</link>
+    <description>Recent content in Posts on Bolor-Erdene Zolbayar</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2018</copyright>
+    <lastBuildDate>Sun, 01 Jan 2017 00:00:00 -0500</lastBuildDate>
+    
+	<atom:link href="https://bolor23erdene.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Recent Posts</title>
+      <link>https://bolor23erdene.github.io/post/posts/</link>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 -0400</pubDate>
+      
+      <guid>https://bolor23erdene.github.io/post/posts/</guid>
+      <description>+++ title = My First Event date = &amp;ldquo;2016-06-24T1904-07:00&amp;rdquo; description = &amp;ldquo;Today is my 36th birthday. How time flies.&amp;rdquo; type = &amp;ldquo;event&amp;rdquo; layout = &amp;ldquo;birthday&amp;rdquo; +++</description>
+    </item>
+    
+  </channel>
+</rss>

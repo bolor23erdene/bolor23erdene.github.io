@@ -1,26 +1,27 @@
-{{- define "main" -}}
+{{ partial "header.html" . }}
+{{ partial "navbar.html" . }}
 
 {{ partial "page_header.html" . }}
 
 <div class="universal-wrapper">
 
   {{ with .Content }}
-  <div class="article-style">{{ . }}</div>
+  <div class="article-style" itemprop="articleBody">{{ . }}</div>
   {{ end }}
 
   {{ $paginator := .Paginate .Data.Pages }}
   {{ range $paginator.Pages }}
-    {{ if eq $.Params.view 1 }}
-      {{ partial "li_list" . }}
-    {{ else if eq $.Params.view 3 }}
-      {{ partial "li_card" . }}
+    {{ if eq $.Params.list_format 0 }}
+      {{ partial "post_li_simple" . }}
+    {{ else if eq $.Params.list_format 1 }}
+      {{ partial "post_li_detailed" . }}
     {{ else }}
-      {{ partial "li_compact" . }}
+      {{ partial "post_li_stream" . }}
     {{ end }}
   {{ end }}
 
   {{ partial "pagination" . }}
 
 </div>
-
-{{- end -}}
+{{ partial "footer_container.html" . }}
+{{ partial "footer.html" . }}
