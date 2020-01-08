@@ -2,7 +2,7 @@
 # About/Biography widget.
 widget = "about"
 active = true
-date = 2019-01-09T00:00:00
+date = 2020-01-09T00:00:00
 
 # Order that this section will appear in.
 weight = 5
@@ -16,7 +16,7 @@ weight = 5
 
 # List your qualifications (such as academic degrees).
 [[education.courses]]
-  course = "PhD in Computer Science and Engineering"
+  course = "MS in Computer Science and Engineering"
   institution = "Pennsylvania State University"
   year = 2020
 
