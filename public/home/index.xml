@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2018</copyright>
-    <lastBuildDate>Wed, 09 Jan 2019 00:00:00 -0600</lastBuildDate>
+    <lastBuildDate>Wed, 09 Jan 2019 00:00:00 -0500</lastBuildDate>
     
 	<atom:link href="https://bolor23erdene.github.io/home/index.xml" rel="self" type="application/rss+xml" />
     
@@ -15,7 +15,7 @@
     <item>
       <title></title>
       <link>https://bolor23erdene.github.io/home/hero_carousel/</link>
-      <pubDate>Sun, 15 Oct 2017 00:00:00 -0500</pubDate>
+      <pubDate>Sun, 15 Oct 2017 00:00:00 -0400</pubDate>
       
       <guid>https://bolor23erdene.github.io/home/hero_carousel/</guid>
       <description></description>
@@ -24,7 +24,7 @@
     <item>
       <title>Academic</title>
       <link>https://bolor23erdene.github.io/home/hero/</link>
-      <pubDate>Sun, 15 Oct 2017 00:00:00 -0500</pubDate>
+      <pubDate>Sun, 15 Oct 2017 00:00:00 -0400</pubDate>
       
       <guid>https://bolor23erdene.github.io/home/hero/</guid>
       <description>The highly flexible website framework for Hugo with an extensible plugin mechanism. Create a beautifully simple site in under 10 minutes 🚀</description>
@@ -33,7 +33,7 @@
     <item>
       <title></title>
       <link>https://bolor23erdene.github.io/home/about/</link>
-      <pubDate>Wed, 09 Jan 2019 00:00:00 -0600</pubDate>
+      <pubDate>Wed, 09 Jan 2019 00:00:00 -0500</pubDate>
       
       <guid>https://bolor23erdene.github.io/home/about/</guid>
       <description>Biography Welcome! I am a research assistant in Department of Computer Science at Pennsylvania State University working with Prof. Patrick McDaniel. My research interests include machine learning and security.</description>
@@ -60,7 +60,7 @@
     <item>
       <title>Contact</title>
       <link>https://bolor23erdene.github.io/home/contact/</link>
-      <pubDate>Wed, 20 Apr 2016 00:00:00 -0500</pubDate>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 -0400</pubDate>
       
       <guid>https://bolor23erdene.github.io/home/contact/</guid>
       <description></description>
