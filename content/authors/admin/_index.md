@@ -1,6 +1,6 @@
 ---
 # Display name
-name: Nelson Bighetti
+name: Bolor-Erdene Zolbayar
 
 # Username (this should match the folder name)
 authors:
@@ -10,11 +10,11 @@ authors:
 superuser: true
 
 # Role/position
-role: Professor of Artificial Intelligence
+role: Graduate Research Assistant
 
 # Organizations/Affiliations
 organizations:
-- name: Stanford University
+- name: Pennsylvania State University
   url: ""
 
 # Short bio (displayed in user profile at end of posts)
@@ -27,15 +27,15 @@ interests:
 
 education:
   courses:
-  - course: PhD in Artificial Intelligence
-    institution: Stanford University
-    year: 2012
-  - course: MEng in Artificial Intelligence
-    institution: Massachusetts Institute of Technology
-    year: 2009
-  - course: BSc in Artificial Intelligence
-    institution: Massachusetts Institute of Technology
-    year: 2008
+  - course: MS in Computer Science
+    institution: Pennsylania State University
+    year: 2020
+  - course: MS in Aerospace Engineering
+    institution: Pennsylania State University
+    year: 2018
+  - course: BSc in Aerospace Engineering
+    institution: Pennsylania State University
+    year: 2016
 
 # Social/Academic Networking
 # For available icons, see: https://sourcethemes.com/academic/docs/page-builder/#icons
