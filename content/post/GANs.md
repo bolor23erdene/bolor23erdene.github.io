@@ -15,7 +15,7 @@ The goal of one of my research is to generate adversarial network traffic that f
 
 ## My Markdown Content
 
-[Alt text for my gif](/images/dcnn2gcnn2.gif)
+[Alt text for my gif](/static/img/dcnn2gcnn2.gif)
 
 ## Table of Contents
 
