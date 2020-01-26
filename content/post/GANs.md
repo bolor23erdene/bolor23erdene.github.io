@@ -17,6 +17,9 @@ The goal of one of my research is to generate adversarial network traffic that f
 
 [Alt text for my gif](/static/img/dcnn2gcnn2.gif)
 
+[header]
+image = "/static/img/dcnn2gcnn2.gif"
+
 ## Table of Contents
 
 1. [What is generative model?](#generative-model)
