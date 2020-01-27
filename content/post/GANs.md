@@ -15,7 +15,7 @@ The goal of one of my research is to generate adversarial network traffic that f
 
 ## My Markdown Content
 
-[Alt text for my gif](/img/dcnn2gcnn2.gif)
+![Alt text for my gif](static/img/dcnn2gcnn2.gif)
 
 [header]
 image = "/static/img/dcnn2gcnn2.gif"
