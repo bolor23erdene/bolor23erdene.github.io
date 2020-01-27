@@ -94,3 +94,6 @@ To solve this problem, without estimating the density $P\_{r}$ which may not eve
  This is useful for two reasons. First, unlike densitites, this approach can represent distributions confined to a low dimensional manifold. Second, the ability to easily generate samples is often more useful than knowing the numerical value of the density (for example in image superresolution or semantic segmentation when considering the conditional distribution of the output image given the input image). In general, it is computationally difficult to generate samples given an arbitrary high dimensional density.
 
  Variational Auto-Encoders (VAEs) and GANs are well known examples of this approach. VAE focus on the approximate likelihood of the examples, they share the limitations of the standard models and need to fiddle with additional noise terms. GANs offer much more flexibility in the definition of the objective function, including Jensen-Shannon, and all f-divergence as well as some exotic combinations. On the other hand, training GANs is well known for being delicate and unstable, for reasons theoretically investigated in.
+
+
+![Alt text for my gif](static/img/dcnn2gcnn2.gif)
