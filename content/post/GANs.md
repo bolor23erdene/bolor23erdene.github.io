@@ -13,16 +13,6 @@ header:
 
 The goal of one of my research is to generate adversarial network traffic that fools the network detection system. I used deep generative model GANs to create the adversarial samples. GANs are known to be best for learning finite amount of training data, interpolating the training data's distribution, and creating samples that are indistinguishable from the original training data. Basically, with GANs, I was able to generate huge amount adversarial traffic by keeping the features that are intrinsic to the attacks and changing the unimportant features so that the traffic bypasses the detection system. In this article, I will explain why you need GANs, how it works, and what challenges you will encounter applying GANs.
 
-## My Markdown Content
-
-![Alt text for my gif](img/dcnn2gcnn2.gif)
-
-[header]
-image = "/img/dcnn2gcnn2.gif"
-
-[header]
-image = "/img/dcnn2gcnn2.gif"
-
 ## Table of Contents
 
 1. [What is generative model?](#generative-model)
