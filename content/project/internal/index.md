@@ -29,10 +29,14 @@ url_video: ""
 #   Otherwise, set `slides = ""`.
 slides: example
 ---
+# MNIST Original GAN
 ![Alt text for my gif](/img/mnist_gan.gif)
-![Alt text for my gif](/img/anime_gan.gif)
+
+# Anime Original GAN
+![Alt text for my gif](/img/featured.gif)
+
+# Anime Wasserstein GAN with Gradient Penalty
 ![Alt text for my gif](/img/anime_wgan-gp.gif)
-# ![Alt text for my gif](featured.jpg)
 
 
 
