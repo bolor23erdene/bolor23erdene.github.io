@@ -38,5 +38,8 @@ slides: example
 # Anime Wasserstein GAN with Gradient Penalty
 ![Alt text for my gif](/img/anime_wgan-gp.gif)
 
+# Human Faces with GAN with Gradient Penalty
+![Alt text for my gif](/img/human_faces.gif)
+
 
 
