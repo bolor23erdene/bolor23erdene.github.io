@@ -90,5 +90,3 @@ They introduced the saddle point optimization problem. Inside is a maximization 
 - Investigating the concentration of maxima further, they observed that over a large number of random restarts, the loss of the final iterate follows a well-concentrated distribution without extreme outliers.
 
 - By applying SGD using the gradient descent of the loss at adversarial examples they can consistently reduced the loss of the saddle point problem during training.
-
-![This is an image](/PGD/loss.png)
